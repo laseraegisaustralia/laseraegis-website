@@ -10,12 +10,15 @@
 
 <nav class="nav">
   <a class="nav-logo" href="index.html"><img src="images/logo.png" alt="LaserAegis Australia"/></a>
-  <ul class="nav-links">
+  <ul class="nav-links" id="navLinks">
     <li><a href="index.html" class="active">Home</a></li>
     <li><a href="capabilities.html">Capabilities</a></li>
     <li><a href="products.html">Product Catalogue</a></li>
     <li><a href="contact.html">Contact Us</a></li>
   </ul>
+  <button class="nav-toggle" id="navToggle" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
 
 <section class="hero">
@@ -97,9 +100,6 @@
   </div>
 </section>
 
-<!-- VIDEO NOTE: plays correctly once hosted on GitHub Pages (laseraegis.dev).
-     If video still blocked after going live, go to YouTube Studio → your video
-     → Details → scroll down → enable "Allow embedding". -->
 <section class="video-section">
   <div class="video-section-inner rise">
     <div class="video-wrapper">
@@ -126,7 +126,12 @@
 </footer>
 
 <script>
+const toggle=document.getElementById("navToggle");
+const links=document.getElementById("navLinks");
+toggle.addEventListener("click",()=>{toggle.classList.toggle("open");links.classList.toggle("open");});
+links.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>{toggle.classList.remove("open");links.classList.remove("open");}));
 const obs=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting)x.target.classList.add("visible")}),{threshold:.12});
 document.querySelectorAll(".rise").forEach(el=>obs.observe(el));
 </script>
-</body></html>
+</body>
+</html>

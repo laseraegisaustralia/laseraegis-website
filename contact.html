@@ -6,14 +6,18 @@
 <link rel="stylesheet" href="style.css"/>
 </head>
 <body class="contact-page">
+
 <nav class="nav">
   <a class="nav-logo" href="index.html"><img src="images/logo.png" alt="LaserAegis Australia"/></a>
-  <ul class="nav-links">
+  <ul class="nav-links" id="navLinks">
     <li><a href="index.html">Home</a></li>
     <li><a href="capabilities.html">Capabilities</a></li>
     <li><a href="products.html">Product Catalogue</a></li>
     <li><a href="contact.html" class="active">Contact Us</a></li>
   </ul>
+  <button class="nav-toggle" id="navToggle" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
 
 <div class="contact-layout">
@@ -28,8 +32,8 @@
     <!--
       FORM SETUP (5 min):
       1. formspree.io → free signup → create form → copy ID
-      2. Replace YOUR_FORM_ID below with your ID
-      Submissions go to xander@laseraegis.dev
+      2. Replace YOUR_FORM_ID below with your actual ID
+      Submissions will go to xander@laseraegis.dev
     -->
     <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
       <div class="form-group">
@@ -52,7 +56,12 @@
 </div>
 
 <script>
+const toggle=document.getElementById("navToggle");
+const links=document.getElementById("navLinks");
+toggle.addEventListener("click",()=>{toggle.classList.toggle("open");links.classList.toggle("open");});
+links.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>{toggle.classList.remove("open");links.classList.remove("open");}));
 const obs=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting)x.target.classList.add("visible")}),{threshold:.12});
 document.querySelectorAll(".rise").forEach(el=>obs.observe(el));
 </script>
-</body></html>
+</body>
+</html>
