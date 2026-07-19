@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Contact Us — LaserAegis Australia</title>
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body class="contact-page">
+<nav class="nav">
+  <a class="nav-logo" href="index.html"><img src="images/logo.png" alt="LaserAegis Australia"/></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="capabilities.html">Capabilities</a></li>
+    <li><a href="products.html">Product Catalogue</a></li>
+    <li><a href="contact.html" class="active">Contact Us</a></li>
+  </ul>
+</nav>
+
+<div class="contact-layout">
+  <div class="contact-col-left rise">
+    <h1>Contact us for a Customized Solution</h1>
+    <p>Contact LaserAegis Australia to discuss RF and laser system requirements with our engineering team. Provide a brief description of your system requirement and we will respond with next steps.</p>
+    <div class="contact-logo">
+      <img src="images/logo.png" alt="LaserAegis Australia"/>
+    </div>
+  </div>
+  <div class="contact-col-right rise rise-delay-1">
+    <!--
+      FORM SETUP (5 min):
+      1. formspree.io → free signup → create form → copy ID
+      2. Replace YOUR_FORM_ID below with your ID
+      Submissions go to xander@laseraegis.dev
+    -->
+    <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required/>
+      </div>
+      <div class="form-group">
+        <label for="email">Email address</label>
+        <input type="email" id="email" name="email" required/>
+      </div>
+      <div class="form-group">
+        <label for="message">Describe your requirement</label>
+        <textarea id="message" name="message" rows="5"></textarea>
+      </div>
+      <div class="form-submit">
+        <button type="submit" class="btn-submit">Submit</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<script>
+const obs=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting)x.target.classList.add("visible")}),{threshold:.12});
+document.querySelectorAll(".rise").forEach(el=>obs.observe(el));
+</script>
+</body></html>
