@@ -4,9 +4,11 @@
 <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
 <title>Contact Us — LaserAegis Australia</title>
 <link rel="stylesheet" href="style.css"/>
+<link rel="icon" type="image/x-icon" href="images/favicon.ico"/>
+<link rel="icon" type="image/png" sizes="512x512" href="images/favicon.png"/>
+<link rel="apple-touch-icon" href="images/favicon.png"/>
 </head>
 <body class="contact-page">
-
 <nav class="nav">
   <a class="nav-logo" href="index.html"><img src="images/logo.png" alt="LaserAegis Australia"/></a>
   <ul class="nav-links" id="navLinks">
@@ -15,26 +17,15 @@
     <li><a href="products.html">Product Catalogue</a></li>
     <li><a href="contact.html" class="active">Contact Us</a></li>
   </ul>
-  <button class="nav-toggle" id="navToggle" aria-label="Menu">
-    <span></span><span></span><span></span>
-  </button>
+  <button class="nav-toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
 </nav>
-
 <div class="contact-layout">
   <div class="contact-col-left rise">
     <h1>Contact us for a Customized Solution</h1>
     <p>Contact LaserAegis Australia to discuss RF and laser system requirements with our engineering team. Provide a brief description of your system requirement and we will respond with next steps.</p>
-    <div class="contact-logo">
-      <img src="images/logo.png" alt="LaserAegis Australia"/>
-    </div>
+    <div class="contact-logo"><img src="images/logo.png" alt="LaserAegis Australia"/></div>
   </div>
   <div class="contact-col-right rise rise-delay-1">
-    <!--
-      FORM SETUP (5 min):
-      1. formspree.io → free signup → create form → copy ID
-      2. Replace YOUR_FORM_ID below with your actual ID
-      Submissions will go to xander@laseraegis.dev
-    -->
     <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
       <div class="form-group">
         <label for="name">Name</label>
@@ -54,14 +45,11 @@
     </form>
   </div>
 </div>
-
 <script>
-const toggle=document.getElementById("navToggle");
-const links=document.getElementById("navLinks");
+const toggle=document.getElementById("navToggle"),links=document.getElementById("navLinks");
 toggle.addEventListener("click",()=>{toggle.classList.toggle("open");links.classList.toggle("open");});
 links.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>{toggle.classList.remove("open");links.classList.remove("open");}));
 const obs=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting)x.target.classList.add("visible")}),{threshold:.12});
 document.querySelectorAll(".rise").forEach(el=>obs.observe(el));
 </script>
-</body>
-</html>
+</body></html>
