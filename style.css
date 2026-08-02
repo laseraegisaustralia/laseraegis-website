@@ -50,6 +50,13 @@ a{text-decoration:none;color:inherit}
 .gallery-item img{width:100%;aspect-ratio:4/3;object-fit:contain;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08)}
 .gallery-item .gallery-label{font-family:var(--font-mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-top:16px;margin-bottom:10px}
 .gallery-item p{font-size:15px;color:rgba(255,255,255,.65);line-height:1.65}
+.laser-teaser{position:relative;min-height:400px;background:var(--bg-dark);overflow:hidden;display:flex;align-items:center}
+.laser-teaser-bg{position:absolute;inset:0;background-image:url('images/laser-bg-wide.jpg');background-size:cover;background-position:center;opacity:.55}
+.laser-teaser::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(11,14,18,.88) 0%,rgba(11,14,18,.42) 55%,rgba(11,14,18,.12) 100%)}
+.laser-teaser-content{position:relative;z-index:2;max-width:1100px;margin:0 auto;padding:80px 48px;width:100%}
+.laser-teaser-content .label{margin-bottom:16px}
+.laser-teaser-content h2{font-size:32px;font-weight:700;color:var(--text-white);max-width:640px;line-height:1.35;margin-bottom:20px}
+.laser-teaser-content p{font-size:16px;color:rgba(255,255,255,.8);max-width:580px;line-height:1.8;margin-bottom:32px}
 .approach{background:var(--bg-white);padding:90px 48px}
 .approach-inner{max-width:760px;margin:0 auto}
 .approach h2{font-size:46px;font-weight:700;color:var(--text-dark);margin-bottom:12px}
@@ -87,6 +94,18 @@ a{text-decoration:none;color:inherit}
 .daf-check svg{width:16px;height:16px}
 .daf-item h4{font-family:var(--font-mono);font-size:12px;letter-spacing:.18em;font-weight:600;text-transform:uppercase;color:var(--text-white)}
 .daf-item p{font-size:16px;color:rgba(255,255,255,.75);line-height:1.75}
+.laser-section{position:relative;background:var(--bg-dark);padding:90px 48px;overflow:hidden}
+.laser-bg{position:absolute;inset:0;background-image:url('images/laser-bg-square.jpg');background-size:cover;background-position:center;opacity:.38}
+.laser-inner{position:relative;z-index:1;max-width:1100px;margin:0 auto}
+.laser-inner .label{margin-bottom:16px}
+.laser-inner h2{font-size:40px;font-weight:700;color:var(--text-white);margin-bottom:20px}
+.laser-intro{font-size:16px;color:rgba(255,255,255,.78);max-width:680px;line-height:1.8;margin-bottom:56px}
+.laser-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:48px 56px}
+.laser-item{display:flex;flex-direction:column;gap:14px}
+.laser-check{width:32px;height:32px;background:var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center}
+.laser-check svg{width:16px;height:16px}
+.laser-item h4{font-family:var(--font-mono);font-size:12px;letter-spacing:.18em;font-weight:600;text-transform:uppercase;color:var(--text-white)}
+.laser-item p{font-size:16px;color:rgba(255,255,255,.75);line-height:1.75}
 .catalog-section{background:var(--bg-light);padding:80px 48px}
 .catalog-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
 .catalog-left h1{font-size:56px;font-weight:700;color:var(--text-dark);margin-bottom:32px}
@@ -129,11 +148,13 @@ a{text-decoration:none;color:inherit}
   .product-teaser{padding:56px 24px}.product-teaser-inner{grid-template-columns:1fr;gap:40px}
   .features{padding:56px 24px}.features-inner{grid-template-columns:1fr;gap:32px}
   .product-gallery{padding:56px 24px}.product-gallery-inner{grid-template-columns:1fr;gap:24px}
+  .laser-teaser-content{padding:56px 24px}.laser-teaser-content h2{font-size:26px}
   .approach{padding:64px 24px}.approach h2{font-size:36px}.video-section{padding:56px 24px}
   .footer{padding:44px 24px 28px}.footer-contacts{flex-direction:column;gap:20px}
   .page-hero{padding:56px 24px 48px}.page-hero h1{font-size:40px}
   .capability-table-section{padding:0 24px 56px}.cap-table td:first-child{width:180px}
   .daf-section{padding:64px 24px}.daf-inner h2{font-size:36px}.daf-grid{grid-template-columns:1fr}
+  .laser-section{padding:64px 24px}.laser-inner h2{font-size:32px}.laser-grid{grid-template-columns:1fr}
   .catalog-section{padding:56px 24px}.catalog-inner{grid-template-columns:1fr}.catalog-left h1{font-size:40px}
   .range-section{padding:56px 24px}.commodore-section{padding:64px 24px}
   .commodore-inner{grid-template-columns:1fr}.commodore-text h2{font-size:38px}.commodore-img img{width:100%;max-width:320px;margin:0 auto}
