@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Serif:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap');
-:root{--bg-dark:#0b0e12;--bg-dark2:#13171e;--bg-light:#f0f0ee;--bg-white:#ffffff;--gold:#c9952a;--gold-dim:#a07820;--text-white:#ffffff;--text-dark:#111318;--text-body:#2e3138;--text-muted:#666c78;--font-sans:'IBM Plex Serif',serif;--font-mono:'IBM Plex Mono',monospace}
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Serif:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap');
+:root{--bg-dark:#0b0e12;--bg-dark2:#13171e;--bg-light:#f0f0ee;--bg-white:#ffffff;--gold:#c9952a;--gold-dim:#a07820;--text-white:#ffffff;--text-dark:#111318;--text-body:#2e3138;--text-muted:#666c78;--font-serif:'IBM Plex Serif',serif;--font-sans:'IBM Plex Sans',sans-serif;--font-mono:'IBM Plex Serif',serif}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{font-family:var(--font-sans);color:var(--text-body);background:var(--bg-white);line-height:1.6}
+body{font-family:var(--font-serif);color:var(--text-body);background:var(--bg-white);line-height:1.6}
 img{display:block;max-width:100%}
 a{text-decoration:none;color:inherit}
 .rise{opacity:0;transform:translateY(36px);transition:opacity .65s ease,transform .65s ease}
@@ -11,7 +11,7 @@ a{text-decoration:none;color:inherit}
 .nav{position:sticky;top:0;z-index:100;background:var(--bg-dark);border-bottom:1px solid rgba(201,149,42,.2);padding:0 48px;display:flex;align-items:center;justify-content:space-between;height:90px}
 .nav-logo img{height:68px;width:auto}
 .nav-links{display:flex;gap:36px;list-style:none}
-.nav-links a{font-family:var(--font-mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.75);transition:color .2s}
+.nav-links a{font-family:var(--font-sans);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.75);transition:color .2s}
 .nav-links a:hover,.nav-links a.active{color:var(--gold)}
 .nav-toggle{display:none;flex-direction:column;justify-content:center;gap:5px;background:none;border:none;cursor:pointer;padding:6px;z-index:110}
 .nav-toggle span{display:block;width:26px;height:2px;background:var(--text-white);border-radius:2px;transition:all .3s}
@@ -22,13 +22,13 @@ a{text-decoration:none;color:inherit}
 .btn:hover{background:var(--gold);color:var(--bg-dark)}
 .btn-solid{background:var(--gold);color:var(--bg-dark);border-color:var(--gold)}
 .btn-solid:hover{background:var(--gold-dim);border-color:var(--gold-dim)}
-.label{font-family:var(--font-mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+.label{font-family:var(--font-sans);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
 .gold-rule{width:40px;height:2px;background:var(--gold);margin-bottom:24px}
 .hero{position:relative;min-height:580px;background:var(--bg-dark);overflow:hidden;display:flex;align-items:center}
 .hero-bg{position:absolute;inset:0;background-image:url('images/hero-bg.jpeg');background-size:cover;background-position:center 30%;opacity:.25}
 .hero-content{position:relative;z-index:1;max-width:1200px;margin:0 auto;padding:90px 48px;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start;width:100%}
 .hero-left h1{font-size:52px;font-weight:700;color:var(--text-white);line-height:1.08;margin-bottom:14px;white-space:nowrap}
-.hero-left .hero-subtitle{font-family:var(--font-mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:36px;white-space:nowrap}
+.hero-left .hero-subtitle{font-family:var(--font-sans);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:36px;white-space:nowrap}
 .hero-tagline{font-family:var(--font-mono);font-size:16px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--text-white);line-height:1.9;margin-bottom:36px}
 .hero-right{padding-top:80px}
 .hero-right p{font-size:19px;color:rgba(255,255,255,.82);line-height:1.75}
@@ -43,12 +43,12 @@ a{text-decoration:none;color:inherit}
 .feature-item{display:flex;gap:18px;align-items:flex-start}
 .feature-check{width:30px;height:30px;flex-shrink:0;background:var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-top:3px}
 .feature-check svg{width:15px;height:15px}
-.feature-text h4{font-family:var(--font-mono);font-size:12px;letter-spacing:.18em;font-weight:600;text-transform:uppercase;color:var(--text-dark);margin-bottom:8px}
+.feature-text h4{font-family:var(--font-sans);font-size:12px;letter-spacing:.18em;font-weight:600;text-transform:uppercase;color:var(--text-dark);margin-bottom:8px}
 .feature-text p{font-size:16px;color:var(--text-body);line-height:1.65}
 .product-gallery{background:var(--bg-dark);padding:80px 48px}
 .product-gallery-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
 .gallery-item img{width:100%;aspect-ratio:4/3;object-fit:contain;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08)}
-.gallery-item .gallery-label{font-family:var(--font-mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-top:16px;margin-bottom:10px}
+.gallery-item .gallery-label{font-family:var(--font-sans);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-top:16px;margin-bottom:10px}
 .gallery-item p{font-size:15px;color:rgba(255,255,255,.65);line-height:1.65}
 .laser-teaser{position:relative;min-height:400px;background:var(--bg-dark);overflow:hidden;display:flex;align-items:center}
 .laser-teaser-bg{position:absolute;inset:0;background-image:url('images/laser-bg-wide.jpg');background-size:cover;background-position:center;opacity:.55}
@@ -92,7 +92,7 @@ a{text-decoration:none;color:inherit}
 .daf-item{display:flex;flex-direction:column;gap:14px}
 .daf-check{width:32px;height:32px;background:var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center}
 .daf-check svg{width:16px;height:16px}
-.daf-item h4{font-family:var(--font-mono);font-size:12px;letter-spacing:.18em;font-weight:600;text-transform:uppercase;color:var(--text-white)}
+.daf-item h4{font-family:var(--font-sans);font-size:12px;letter-spacing:.18em;font-weight:600;text-transform:uppercase;color:var(--text-white)}
 .daf-item p{font-size:16px;color:rgba(255,255,255,.75);line-height:1.75}
 .laser-section{position:relative;background:var(--bg-dark);padding:90px 48px;overflow:hidden}
 .laser-bg{position:absolute;inset:0;background-image:url('images/laser-bg-square.jpg');background-size:cover;background-position:center;opacity:.38}
@@ -104,7 +104,7 @@ a{text-decoration:none;color:inherit}
 .laser-item{display:flex;flex-direction:column;gap:14px}
 .laser-check{width:32px;height:32px;background:var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center}
 .laser-check svg{width:16px;height:16px}
-.laser-item h4{font-family:var(--font-mono);font-size:12px;letter-spacing:.18em;font-weight:600;text-transform:uppercase;color:var(--text-white)}
+.laser-item h4{font-family:var(--font-sans);font-size:12px;letter-spacing:.18em;font-weight:600;text-transform:uppercase;color:var(--text-white)}
 .laser-item p{font-size:16px;color:rgba(255,255,255,.75);line-height:1.75}
 .catalog-section{background:var(--bg-light);padding:80px 48px}
 .catalog-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
@@ -128,7 +128,7 @@ a{text-decoration:none;color:inherit}
 .commodore-section{background:var(--bg-white);padding:90px 48px}
 .commodore-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr auto;gap:64px;align-items:center}
 .commodore-text h2{font-size:50px;font-weight:700;color:var(--text-dark);margin-bottom:10px}
-.commodore-text .sub-label{font-family:var(--font-mono);font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:28px;display:block}
+.commodore-text .sub-label{font-family:var(--font-sans);font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:28px;display:block}
 .commodore-text p{font-size:18px;color:var(--text-body);line-height:1.85;max-width:560px}
 .commodore-img img{width:320px;max-width:100%}
 .contact-page{background:var(--bg-dark);min-height:100vh}
