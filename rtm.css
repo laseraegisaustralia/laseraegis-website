@@ -105,7 +105,7 @@ svg { stroke: currentColor; }
   position: relative;
   overflow: hidden;
 }
-.hero-top { display:flex; align-items:flex-end; max-width:1300px; margin:0 auto; padding: 0 48px 56px; position:relative; z-index:2; }
+.hero-top { display:flex; align-items:center; max-width:1300px; margin:0 auto; padding: 0 48px 56px; position:relative; z-index:2; }
 .hero-top-text { width: auto; flex: 0 0 400px; padding-left: 64px; margin-bottom: 34px; }
 .hero-visual { flex: 1 1 auto; padding-left: 32px; }
 .hero-eyebrow { display:flex; align-items:center; margin-bottom: 22px; }
@@ -350,6 +350,7 @@ svg { stroke: currentColor; }
 .decision-block { margin-top: 56px; }
 .decision-block:first-child { margin-top:0; }
 .decision-block-head { font-family:var(--font-mono); font-size:11px; letter-spacing:0.1em; text-transform:uppercase; color:var(--gold-dim); margin-bottom:18px; }
+.table-scroll { overflow-x:auto; -webkit-overflow-scrolling:touch; }
 .std-table-dark { width:100%; border-collapse: collapse; }
 .std-table-dark tr { border-bottom: 1px solid rgba(255,255,255,0.08); }
 .std-table-dark tr:last-child { border-bottom:none; }
@@ -446,8 +447,8 @@ svg { stroke: currentColor; }
 .h2-dark, .h2-light { font-size: 40px; }
 .body-dark, .body-light { font-size: 18px; max-width: 680px; }
 .hero h1 { font-size: 36px; line-height: 1.18; white-space: nowrap; }
-.hero-sub { font-size: 15px; max-width: 480px; }
-.hero-body { font-size: 13.5px; max-width: 480px; }
+.hero-sub { font-size: 17px; max-width: 480px; }
+.hero-body { font-size: 15.5px; max-width: 600px; }
 .pain-row p, .wt-text p, .fit-item, .ps-pain p, .ps-solve p, .step-item p, .cap-compact-item p, .decision-disclaimer, .fit-card p { font-size: 16px; }
 .wt-text h3, .h3-dark { font-size: 26px; }
 .std-table td, .price-table { font-size: 16px; }
@@ -467,7 +468,7 @@ svg { stroke: currentColor; }
 .decision-block .body-dark { max-width: 1004px; white-space: nowrap; }
 
 @media (max-width: 600px) {
-  .hero-top-text, .hero-visual { width:100%; flex-basis:100%; padding-left:0; margin-bottom:0; }
+  .hero-top-text, .hero-visual { width:100%; flex:none; padding-left:0; margin-bottom:0; }
   .hero h1 { font-size:36px; white-space:normal; }
   .h2-dark, .h2-light, .pilot h2 { font-size: 32px; }
   .body-dark, .body-light, .hero-sub, .hero-body { font-size: 17px; }
@@ -475,4 +476,55 @@ svg { stroke: currentColor; }
   .step-item p { text-align: center; }
   .diagram-band-head h2 { font-size: 26px; white-space: normal; }
   .decision-block .body-dark { white-space: normal; }
+}
+
+/* ══════════════ Mobile layout fixes — stack every multi-column section ══════════════ */
+@media (max-width: 600px) {
+  .section-inner { padding: 0 22px; }
+  .pad-lg { padding: 64px 0; }
+  .pad-md { padding: 52px 0; }
+
+  /* Hero */
+  .hero { padding-top: 56px; }
+  .hero-top { flex-direction: column; align-items: flex-start; max-width: 100%; padding: 0 22px 40px; }
+  .hero-top-text { margin-bottom: 32px; }
+  .hero-visual { margin-top: 4px; }
+
+  /* Stat band */
+  .statband .section-inner { flex-direction: column; padding-bottom: 8px; }
+  .stat-item { width: 100%; border-right: none; border-bottom: 1px solid var(--line); padding: 22px 0; }
+  .stat-item:last-child { border-bottom: none; }
+
+  /* Pain -> Solution rows */
+  .ps-row { flex-direction: column; align-items: stretch; padding: 20px; }
+  .ps-pain, .ps-solve { width: 100%; }
+  .ps-arrow { width: 100%; transform: rotate(90deg); margin: 6px 0; }
+
+  /* How It Works */
+  .step-flow { flex-direction: column; gap: 36px; }
+  .step-item { width: 100%; padding: 0; max-width: 320px; margin: 0 auto; }
+  .step-connector { display: none; }
+
+  /* Walkthrough rows */
+  .wt-row, .wt-row.rev { flex-direction: column; align-items: stretch; margin-bottom: 56px; }
+  .wt-text, .wt-visual { width: 100%; }
+  .wt-row .wt-text, .wt-row.rev .wt-visual { padding-right: 0; }
+  .wt-row .wt-visual { margin-top: 24px; }
+  .wt-row.rev .wt-text { order: -1; margin-top: 24px; }
+
+  /* Who This Is For */
+  .who-grid { flex-wrap: wrap; }
+  .who-card { width: calc(50% - 10px); margin-bottom: 20px; }
+  .who-card:nth-child(2n) { margin-right: 0; }
+
+  /* Capabilities grid */
+  .cap-compact-item { width: 50%; padding: 16px 12px; }
+
+  /* Pilot CTA steps */
+  .pilot-steps { flex-direction: column; gap: 26px; align-items: center; }
+  .pilot-step { width: 100%; max-width: 280px; }
+
+  /* Standards / pricing tables — allow horizontal scroll instead of squashing */
+  .table-scroll { margin: 0 -22px; padding: 0 22px; }
+  .std-table-dark, .price-table { min-width: 560px; }
 }
