@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KSHB982GC9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KSHB982GC9');
+</script>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Request Product Information — LaserAegis Australia</title>
+<meta name="description" content="Request a product datasheet, quotation or technical information from LaserAegis Australia."/>
+<meta name="robots" content="noindex,follow"/>
+<link rel="canonical" href="https://laseraegis.dev/request.html"/>
+<link rel="stylesheet" href="style.css"/>
+<link rel="icon" type="image/x-icon" href="images/favicon.ico"/>
+<link rel="icon" type="image/png" sizes="512x512" href="images/favicon.png"/>
+<link rel="apple-touch-icon" href="images/favicon.png"/>
+</head>
+<body class="contact-page">
+<nav class="nav">
+  <a class="nav-logo" href="index.html"><img src="images/logo.png" alt="LaserAegis Australia"/></a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Home</a></li>
+    <li class="has-dropdown"><a href="capabilities.html">Capabilities</a><ul class="dropdown"><li><a href="capabilities.html#rf">RF Amplifiers</a></li><li><a href="capabilities.html#laser-services">Laser Systems</a></li></ul></li>
+    <li class="has-dropdown"><a href="products.html">Products</a><ul class="dropdown"><li><a href="commodore.html">Commodore&trade; Series RF Amplifiers</a></li><li><a href="commercial.html">Commercial Series RF Amplifiers</a></li><li><a href="laser.html">Laser Modules</a></li></ul></li>
+    <li><a href="rtm.html">RTM Software</a></li>
+    <li><a href="contact.html" class="active">Contact Us</a></li>
+  </ul>
+  <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+</nav>
+
+<main class="contact-layout">
+  <div class="contact-col-left rise">
+    <p class="contact-eyebrow">Engineering enquiries</p>
+    <h1 id="requestHeading">Request Product Information</h1>
+    <p id="requestIntro">Request a datasheet, quotation or technical information. Complete the short form and our team will respond as soon as possible.</p>
+    <div class="contact-direct">
+      <span>Prefer to contact us directly?</span>
+      <a href="mailto:xander@laseraegis.dev">xander@laseraegis.dev</a>
+      <a href="tel:+61451986931">+61 451 986 931</a>
+    </div>
+  </div>
+
+  <div class="contact-col-right rise rise-delay-1">
+    <form id="productRequestForm" class="request-form" novalidate>
+      <input type="hidden" name="access_key" value="10a9131d-dea9-4f06-bd17-fefb5ba3597a"/>
+      <input type="hidden" name="product" id="productInput" value="General enquiry"/>
+      <input type="hidden" name="series" id="seriesInput" value=""/>
+      <input type="hidden" name="request_type" id="requestTypeInput" value="general enquiry"/>
+      <input type="hidden" name="source_page" id="sourcePageInput" value="contact.html"/>
+      <input type="hidden" name="subject" id="subjectInput" value="New website enquiry — LaserAegis Australia"/>
+      <input type="checkbox" name="botcheck" class="form-honeypot" tabindex="-1" autocomplete="off"/>
+
+      <div class="selected-product" id="selectedProductPanel">
+        <span>Selected product</span>
+        <strong id="productDisplay">General enquiry</strong>
+        <a href="products.html" id="changeProductLink">Change product</a>
+      </div>
+
+      <div class="form-grid">
+        <div class="form-field">
+          <label for="name">Name <span aria-hidden="true">*</span></label>
+          <input id="name" type="text" name="name" autocomplete="name" required/>
+          <span class="field-error" aria-live="polite"></span>
+        </div>
+        <div class="form-field">
+          <label for="company">Company <span aria-hidden="true">*</span></label>
+          <input id="company" type="text" name="company" autocomplete="organization" required/>
+          <span class="field-error" aria-live="polite"></span>
+        </div>
+        <div class="form-field form-field-wide">
+          <label for="email">Email <span aria-hidden="true">*</span></label>
+          <input id="email" type="email" name="email" autocomplete="email" required/>
+          <span class="field-error" aria-live="polite"></span>
+        </div>
+        <div class="form-field form-field-wide">
+          <label for="message">Additional requirements <small>Optional</small></label>
+          <textarea id="message" name="message" rows="4" placeholder="Quantity, application or any questions"></textarea>
+        </div>
+      </div>
+
+      <p class="form-privacy">We will only use your details to respond to this request.</p>
+      <button type="submit" class="btn btn-solid form-submit" id="submitButton">Submit Request</button>
+      <div class="form-status" id="formStatus" role="status" aria-live="polite"></div>
+    </form>
+
+    <section class="request-success" id="requestSuccess" hidden>
+      <div class="success-mark" aria-hidden="true">&#10003;</div>
+      <h2>Request received</h2>
+      <p>Thank you. Our team will review your request and respond as soon as possible.</p>
+      <a href="products.html" class="btn">View Products</a>
+    </section>
+  </div>
+</main>
+
+<script src="request-form.js"></script>
+</body>
+</html>

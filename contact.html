@@ -7,10 +7,8 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-KSHB982GC9');
 </script>
-
 <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
 <title>Contact Us — LaserAegis Australia</title>
 <meta name="description" content="Contact LaserAegis Australia to discuss RF power amplification, laser systems, integration, verification, validation and lifecycle support requirements."/>
@@ -19,82 +17,70 @@
 <link rel="icon" type="image/x-icon" href="images/favicon.ico"/>
 <link rel="icon" type="image/png" sizes="512x512" href="images/favicon.png"/>
 <link rel="apple-touch-icon" href="images/favicon.png"/>
-<style>
-  /* Tally iframe styling */
-  .tally-wrapper {
-    width: 100%;
-    min-height: 420px;
-    position: relative;
-  }
-  .tally-wrapper iframe {
-    width: 100%;
-    min-height: 420px;
-    border: none;
-    background: transparent;
-  }
-  /* Cover for the "Made with Tally" badge — sits bottom-right, same row as Submit */
-  .tally-badge-cover {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    width: 220px;
-    height: 70px;
-    background: var(--bg-dark);
-    pointer-events: none;
-  }
-</style>
 </head>
 <body class="contact-page">
-
 <nav class="nav">
   <a class="nav-logo" href="index.html"><img src="images/logo.png" alt="LaserAegis Australia"/></a>
   <ul class="nav-links" id="navLinks">
     <li><a href="index.html">Home</a></li>
-    <li><a href="capabilities.html">Capabilities</a></li>
+    <li class="has-dropdown"><a href="capabilities.html">Capabilities</a><ul class="dropdown"><li><a href="capabilities.html#rf">RF Amplifiers</a></li><li><a href="capabilities.html#laser-services">Laser Systems</a></li></ul></li>
     <li class="has-dropdown"><a href="products.html">Products</a><ul class="dropdown"><li><a href="commodore.html">Commodore&trade; Series RF Amplifiers</a></li><li><a href="commercial.html">Commercial Series RF Amplifiers</a></li><li><a href="laser.html">Laser Modules</a></li></ul></li>
     <li><a href="rtm.html">RTM Software</a></li>
     <li><a href="contact.html" class="active">Contact Us</a></li>
   </ul>
-  <button class="nav-toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+  <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
 </nav>
 
-<div class="contact-layout">
-  <!-- Left column: heading + logo -->
+<main class="contact-layout contact-general">
   <div class="contact-col-left rise">
-    <h1>Contact us for a Customized Solution</h1>
-    <p>Contact LaserAegis Australia to discuss RF and laser system requirements with our engineering team. Provide a brief description of your system requirement and we will respond with next steps.</p>
-    <div class="contact-logo">
-      <img src="images/logo.png" alt="LaserAegis Australia"/>
-    </div>
+    <h1>Contact us for a<br/>Customized Solution</h1>
+    <p>Contact LaserAegis Australia to discuss RF and laser system requirements with our engineering team. Provide a brief description of your requirement and we will respond with next steps.</p>
+    <div class="contact-logo"><img src="images/logo.png" alt="LaserAegis Australia"/></div>
   </div>
 
-  <!-- Right column: Tally embedded form -->
   <div class="contact-col-right rise rise-delay-1">
-    <div class="tally-wrapper">
-      <iframe
-        data-tally-src="https://tally.so/embed/jagvDa?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
-        loading="lazy"
-        width="100%"
-        height="420"
-        frameborder="0"
-        marginheight="0"
-        marginwidth="0"
-        title="Contact LaserAegis Australia">
-      </iframe>
-      <div class="tally-badge-cover"></div>
-    </div>
+    <form id="generalContactForm" class="request-form general-contact-form" novalidate>
+      <input type="hidden" name="access_key" value="10a9131d-dea9-4f06-bd17-fefb5ba3597a"/>
+      <input type="hidden" name="request_type" value="general website enquiry"/>
+      <input type="hidden" name="source_page" value="contact.html"/>
+      <input type="hidden" name="subject" value="New general enquiry — LaserAegis Australia"/>
+      <input type="checkbox" name="botcheck" class="form-honeypot" tabindex="-1" autocomplete="off" aria-hidden="true"/>
+
+      <div class="form-field">
+        <label for="contactName">Name <span aria-hidden="true">*</span></label>
+        <input id="contactName" type="text" name="name" autocomplete="name" required/>
+        <span class="field-error" aria-live="polite"></span>
+      </div>
+      <div class="form-field">
+        <label for="contactEmail">Email <span aria-hidden="true">*</span></label>
+        <input id="contactEmail" type="email" name="email" autocomplete="email" required/>
+        <span class="field-error" aria-live="polite"></span>
+      </div>
+      <div class="form-field">
+        <label for="contactCompany">Organization <span aria-hidden="true">*</span></label>
+        <input id="contactCompany" type="text" name="company" autocomplete="organization" required/>
+        <span class="field-error" aria-live="polite"></span>
+      </div>
+      <div class="form-field">
+        <label for="contactMessage">Describe your requirement <span aria-hidden="true">*</span></label>
+        <textarea id="contactMessage" name="message" rows="4" required></textarea>
+        <span class="field-error" aria-live="polite"></span>
+      </div>
+
+      <p class="form-privacy">We will only use your details to respond to this enquiry.</p>
+      <button type="submit" class="btn btn-solid form-submit" id="contactSubmitButton">Submit <span aria-hidden="true">&rarr;</span></button>
+      <div class="form-status" id="contactFormStatus" role="status" aria-live="polite"></div>
+    </form>
+
+    <section class="request-success" id="contactSuccess" hidden>
+      <div class="success-mark" aria-hidden="true">&#10003;</div>
+      <h2>Message received</h2>
+      <p>Thank you. Our engineering team will review your enquiry and respond as soon as possible.</p>
+      <a href="index.html" class="btn">Return Home</a>
+    </section>
   </div>
-</div>
+</main>
 
-<!-- Tally embed script: handles dynamic height + transparent background -->
-<script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
-
-<script>
-const toggle=document.getElementById("navToggle"),links=document.getElementById("navLinks");
-toggle.addEventListener("click",()=>{toggle.classList.toggle("open");links.classList.toggle("open");});
-links.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>{toggle.classList.remove("open");links.classList.remove("open");}));
-const obs=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting)x.target.classList.add("visible")}),{threshold:.12});
-document.querySelectorAll(".rise").forEach(el=>obs.observe(el));
-</script>
+<script src="contact-form.js"></script>
 </body>
 </html>
