@@ -324,3 +324,7 @@ a.gallery-item:hover .gallery-label{text-decoration:underline}
 .cap-section .spec-card td:first-child{width:30%}
 .cap-note{font-size:14px;line-height:1.75;color:var(--text-muted);max-width:100%}
 @media(max-width:900px){.cap-section{padding:48px 24px}}
+
+/* Insights navigation: keep the expanded menu within the viewport. */
+@media (min-width:901px) and (max-width:1150px){.nav{padding-inline:24px}.nav-links{gap:20px}.nav-links a{letter-spacing:.07em}}
+@media (min-width:601px) and (max-width:900px){.nav{padding-inline:24px;height:80px}.nav-toggle{display:flex}.nav-links{display:none;position:absolute;top:80px;left:0;right:0;background:var(--bg-dark);flex-direction:column;padding:8px 0 20px;gap:0;max-height:calc(100vh - 80px);overflow:auto}.nav-links.open{display:flex}.nav-links>li,.nav-links .has-dropdown{display:block}.nav-links li a{display:block;padding:14px 24px}.nav-links .dropdown{position:static;display:block;opacity:1;visibility:visible;transform:none;box-shadow:none;border:0;min-width:0;background:transparent}.nav-links .dropdown a{padding-left:40px;font-size:12px}}

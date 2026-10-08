@@ -33,12 +33,32 @@
     document.getElementById("requestIntro").textContent = "Tell us which product you are considering. Additional requirements are optional and our engineering team will follow up directly.";
   }
 
+  const isTechnical = requestType === "technical";
+  if (isTechnical) {
+    document.getElementById("requestHeading").textContent = "Discuss Your RF Amplifier Requirements";
+    document.getElementById("requestIntro").textContent = "Start with the band, output power and waveform you have in mind. Include duty cycle, cooling or control requirements if known.";
+    document.querySelector('label[for="company"]').textContent = "Company (optional)";
+    document.getElementById("company").required = false;
+    document.querySelector('label[for="message"]').textContent = "Describe your RF requirements *";
+    const message = document.getElementById("message");
+    message.required = true;
+    message.placeholder = "Frequency band, output power, waveform and duty cycle. Add any questions or constraints.";
+    message.setAttribute("aria-describedby", "messageError");
+    const error = document.createElement("span");
+    error.className = "field-error";
+    error.id = "messageError";
+    error.setAttribute("aria-live", "polite");
+    message.after(error);
+    document.getElementById("changeProductLink").textContent = "Back to the article";
+    document.getElementById("changeProductLink").href = "insights/adjustable-bias-rf-power-amplifier-class-a-ab/index.html";
+  }
+
   if (product === "General enquiry") {
     document.getElementById("selectedProductPanel").classList.add("general-enquiry");
     document.getElementById("changeProductLink").textContent = "Browse products";
   }
 
-  const requiredFields = ["name", "company", "email"];
+  const requiredFields = isTechnical ? ["name", "email", "message"] : ["name", "company", "email"];
   const validate = () => {
     let valid = true;
     requiredFields.forEach((id) => {
