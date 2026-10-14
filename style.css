@@ -328,3 +328,6 @@ a.gallery-item:hover .gallery-label{text-decoration:underline}
 /* Insights navigation: keep the expanded menu within the viewport. */
 @media (min-width:901px) and (max-width:1150px){.nav{padding-inline:24px}.nav-links{gap:20px}.nav-links a{letter-spacing:.07em}}
 @media (min-width:601px) and (max-width:900px){.nav{padding-inline:24px;height:80px}.nav-toggle{display:flex}.nav-links{display:none;position:absolute;top:80px;left:0;right:0;background:var(--bg-dark);flex-direction:column;padding:8px 0 20px;gap:0;max-height:calc(100vh - 80px);overflow:auto}.nav-links.open{display:flex}.nav-links>li,.nav-links .has-dropdown{display:block}.nav-links li a{display:block;padding:14px 24px}.nav-links .dropdown{position:static;display:block;opacity:1;visibility:visible;transform:none;box-shadow:none;border:0;min-width:0;background:transparent}.nav-links .dropdown a{padding-left:40px;font-size:12px}}
+
+/* Keep short introductions from leaving isolated final words. */
+.page-hero p,.cap-lede,.trust-intro,.verification-heading p,.home-heading p,.about-lede,.article-deck,.hero-deck{ text-wrap:pretty; }

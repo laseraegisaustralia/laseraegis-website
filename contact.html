@@ -10,32 +10,35 @@
   gtag('config', 'G-KSHB982GC9');
 </script>
 <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>Contact Us — LaserAegis Australia</title>
-<meta name="description" content="Contact LaserAegis Australia to discuss RF power amplification, laser systems, integration, verification, validation and lifecycle support requirements."/>
+<title>Contact LaserAegis | RF, Laser &amp; RTM Enquiries</title>
+<meta name="description" content="Contact LaserAegis Australia about RF amplifiers, laser systems and RTM requirements traceability software. Discuss engineering, licensing and release enquiries."/>
 <link rel="canonical" href="https://laseraegis.dev/contact.html"/>
 <link rel="stylesheet" href="style.css"/>
 <link rel="icon" type="image/x-icon" href="images/favicon.ico"/>
 <link rel="icon" type="image/png" sizes="512x512" href="images/favicon.png"/>
 <link rel="apple-touch-icon" href="images/favicon.png"/>
+<link rel="stylesheet" href="company.css"/>
+<link rel="stylesheet" href="layout-refinements.css"/>
 </head>
 <body class="contact-page">
-<nav class="nav">
-  <a class="nav-logo" href="index.html"><img src="images/logo.png" alt="LaserAegis Australia"/></a>
+<nav class="nav" aria-label="Main navigation">
+  <a class="nav-logo" href="./" aria-label="LaserAegis Australia home"><img src="images/logo.png" alt="LaserAegis Australia"/></a>
   <ul class="nav-links" id="navLinks">
-    <li><a href="index.html">Home</a></li>
-    <li class="has-dropdown"><a href="capabilities.html">Capabilities</a><ul class="dropdown"><li><a href="capabilities.html#rf">RF Amplifiers</a></li><li><a href="capabilities.html#laser-services">Laser Systems</a></li></ul></li>
+    <li class="has-dropdown"><a href="capabilities.html">Capabilities</a><ul class="dropdown"><li><a href="capabilities/rf-systems/">RF Amplifier Systems</a></li><li><a href="capabilities/laser-systems/">Laser Systems</a></li><li><a href="capabilities.html#delivery">Engineering &amp; Delivery</a></li></ul></li>
     <li class="has-dropdown"><a href="products.html">Products</a><ul class="dropdown"><li><a href="commodore.html">Commodore&trade; Series RF Amplifiers</a></li><li><a href="commercial.html">Commercial Series RF Amplifiers</a></li><li><a href="laser.html">Laser Modules</a></li></ul></li>
     <li><a href="rtm.html">RTM Software</a></li>
-    <li><a href="insights/index.html">Insights</a></li>
-    <li><a href="contact.html" class="active">Contact Us</a></li>
+    <li><a href="insights/">Insights</a></li>
+    <li><a href="about/">About</a></li>
+    <li><a href="contact.html" class="nav-contact active">Contact Us</a></li>
   </ul>
-  <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-controls="navLinks" aria-expanded="false"><span></span><span></span><span></span></button>
 </nav>
 
 <main class="contact-layout contact-general">
   <div class="contact-col-left rise">
     <h1>Contact us for a<br/>Customized Solution</h1>
-    <p>Contact LaserAegis Australia to discuss RF and laser system requirements with our engineering team. Provide a brief description of your requirement and we will respond with next steps.</p>
+    <p>Contact LaserAegis Australia about RF amplifiers, laser systems or Requirements Traceability Manager (RTM) software. Share your engineering requirements, or ask about RTM features, licensing and the upcoming release. Partial details are welcome.</p>
+    <div class="contact-direct"><p class="contact-eyebrow">Direct contact</p><a href="mailto:xander@laseraegis.dev">xander@laseraegis.dev</a><a href="tel:+61451986931">+61 451 986 931</a><span>We reply within one business day (Brisbane time).</span></div>
     <div class="contact-logo"><img src="images/logo.png" alt="LaserAegis Australia"/></div>
   </div>
 
@@ -62,13 +65,40 @@
         <input id="contactCompany" type="text" name="company" autocomplete="organization" required/>
         <span class="field-error" aria-live="polite"></span>
       </div>
+            <div class="form-field">
+        <label for="contactType">Enquiry type <span aria-hidden="true">*</span></label>
+        <select id="contactType" name="enquiry_type" required>
+          <option value="">Select one</option>
+          <option>RF power amplifier (Commodore or Commercial series)</option>
+          <option>Commodore ARM I HF/VHF amplifier</option>
+          <option>Laser rangefinder, illuminator or EO payload</option>
+          <option>Laser systems consulting, integration or support</option>
+          <option>RF or laser systems integration and verification</option>
+          <option>RTM software — features, licensing or release enquiry</option>
+          <option>Distributor or reseller enquiry</option>
+          <option>Other</option>
+        </select>
+        <span class="field-error" aria-live="polite"></span>
+      </div>
       <div class="form-field">
         <label for="contactMessage">Describe your requirement <span aria-hidden="true">*</span></label>
         <textarea id="contactMessage" name="message" rows="4" required></textarea>
         <span class="field-error" aria-live="polite"></span>
       </div>
+      <fieldset class="form-details">
+        <legend>Helps us reply with a useful answer <small>(optional)</small></legend>
+        <div class="form-row-2">
+          <div class="form-field"><label for="contactCountry">Country or region</label><input id="contactCountry" type="text" name="country" autocomplete="country-name"/></div>
+          <div class="form-field"><label for="contactQty">Quantity</label><select id="contactQty" name="quantity"><option value="">Not sure yet</option><option>1 unit</option><option>2–10 units</option><option>11–50 units</option><option>50+ or ongoing supply</option></select></div>
+        </div>
+        <div class="form-field"><label for="contactPerf">Key performance</label><input id="contactPerf" type="text" name="key_performance" placeholder="e.g. 80 MHz–1 GHz, 100 W, or 5 km range, 1535 nm"/></div>
+        <div class="form-row-2">
+          <div class="form-field"><label for="contactEnv">Environment or standard</label><select id="contactEnv" name="environment_standard"><option value="">Not sure yet</option><option>Laboratory or commercial</option><option>MIL-STD-810 / 461 required</option><option>Other standard (please describe)</option></select></div>
+          <div class="form-field"><label for="contactTiming">Required by</label><select id="contactTiming" name="timeline"><option value="">Not sure yet</option><option>Within 3 months</option><option>3–6 months</option><option>6+ months</option><option>Budgetary quote only</option></select></div>
+        </div>
+      </fieldset>
 
-      <p class="form-privacy">We will only use your details to respond to this enquiry.</p>
+      <p class="form-privacy">We will only use your details to respond to this enquiry. Reply within one business day (Brisbane time).</p>
       <button type="submit" class="btn btn-solid form-submit" id="contactSubmitButton">Submit <span aria-hidden="true">&rarr;</span></button>
       <div class="form-status" id="contactFormStatus" role="status" aria-live="polite"></div>
     </form>
@@ -76,12 +106,14 @@
     <section class="request-success" id="contactSuccess" hidden>
       <div class="success-mark" aria-hidden="true">&#10003;</div>
       <h2>Message received</h2>
-      <p>Thank you. Our engineering team will review your enquiry and respond as soon as possible.</p>
-      <a href="index.html" class="btn">Return Home</a>
+      <p>Thank you. Our engineering team will review your enquiry and reply within one business day (Brisbane time).</p>
+      <a href="./" class="btn">Return Home</a>
     </section>
   </div>
 </main>
 
 <script src="contact-form.js"></script>
+<script src="local-preview.js"></script>
+<script src="fit-h1.js" defer></script>
 </body>
 </html>

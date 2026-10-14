@@ -3,7 +3,7 @@
   const form = document.getElementById("generalContactForm");
   if (!form) return;
 
-  const fields = ["contactName", "contactEmail", "contactCompany", "contactMessage"];
+  const fields = ["contactName", "contactEmail", "contactCompany", "contactType", "contactMessage"];
   const validate = () => {
     let valid = true;
     fields.forEach((id) => {
@@ -19,7 +19,18 @@
     return valid;
   };
 
-  fields.forEach((id) => document.getElementById(id).addEventListener("input", validate));
+  const topics = {
+    rf: "RF power amplifier (Commodore or Commercial series)",
+    arm1: "Commodore ARM I HF/VHF amplifier",
+    laser: "Laser rangefinder, illuminator or EO payload",
+    "laser-consulting": "Laser systems consulting, integration or support",
+    integration: "RF or laser systems integration and verification",
+    distributor: "Distributor or reseller enquiry"
+  };
+  const topic = new URLSearchParams(window.location.search).get("topic");
+  if (topic && topics[topic]) document.getElementById("contactType").value = topics[topic];
+
+  fields.forEach((id) => { const el = document.getElementById(id); el.addEventListener("input", validate); el.addEventListener("change", validate); });
   form.addEventListener("submit", async (event) => {
     event.preventDefault();
     if (!validate()) {
@@ -32,12 +43,15 @@
     button.textContent = "Sending…";
     status.textContent = "";
     try {
+      const typeValue = document.getElementById("contactType").value;
+      const subjectInput = form.querySelector('input[name="subject"]');
+      if (subjectInput) subjectInput.value = "New enquiry (" + typeValue + ") — LaserAegis Australia";
       const response = await fetch("https://api.web3forms.com/submit", { method: "POST", body: new FormData(form) });
       const result = await response.json();
       if (!response.ok || !result.success) throw new Error("Submission failed");
       form.hidden = true;
       document.getElementById("contactSuccess").hidden = false;
-      if (typeof window.gtag === "function") window.gtag("event", "contact_submit", { source_page: "contact.html" });
+      if (typeof window.gtag === "function") window.gtag("event", "contact_submit", { source_page: "contact.html", enquiry_type: typeValue });
     } catch (error) {
       status.textContent = "We could not send your message. Please try again or email xander@laseraegis.dev.";
       button.disabled = false;
