@@ -26,3 +26,14 @@
 .home-main .home-product-highlights .home-highlights-note{font:12px/1.6 var(--font-sans);color:#666c78;margin-top:20px}
 
 .home-product-image .series-pair-label{white-space:normal;line-height:1.4}.series-pair-label small{display:block;font-size:.8em;color:#666c78;margin-top:5px}
+
+/* V4 RTM business line: product evidence, project questions, clear next step. */
+.home-rtm{background:radial-gradient(ellipse at 80% 60%,#30291c 0,transparent 60%),#13171e}.home-rtm-grid{grid-template-columns:1fr 1.05fr;gap:64px}.home-rtm-identity{display:flex;gap:20px;align-items:center;margin-bottom:24px}.home-rtm-identity img{width:80px;height:auto;mix-blend-mode:screen}.home-rtm-identity .label{margin:0}.home-rtm h2{font-size:34px}.home-rtm-benefits{list-style:none;padding:0;margin:25px 0;font:15px/1.7 var(--font-sans)}.home-rtm-benefits li{border-top:1px solid #3c4147;padding:10px 0}.home-rtm-benefits li::before{content:'→';color:#d7ad5a;margin-right:12px}.home-rtm-detail{color:#b2bdc6}.home-rtm .home-link{color:#dfb76a}.home-rtm-preview{border-radius:12px;overflow:hidden;box-shadow:0 0 60px #c9952a16}.home-rtm-preview .home-browser-bar{padding:9px 16px;font-size:10px;color:#72767c;background:#0b0f14;letter-spacing:4px}.home-rtm-preview img{display:block;aspect-ratio:2.7;object-fit:contain}.home-main .home-rtm-caption{font:12px/1.7 var(--font-sans);color:#acb5bf;margin-top:14px}.home-rtm .home-rtm-detail{font-size:15px!important}
+@media(max-width:1000px){.home-rtm-grid{gap:35px}.home-rtm h2{font-size:30px}}@media(max-width:760px){.home-rtm-grid{grid-template-columns:1fr}.home-rtm h2{font-size:28px}.home-rtm-identity{gap:14px}.home-rtm-identity .label{font-size:10px}}
+
+.home-rtm-preview img{aspect-ratio:auto!important}.home-rtm .home-rtm-caption{font:12px/1.7 var(--font-sans)!important}
+
+/* The RTM preview uses the same lift and shadow as the RTM audience cards. */
+.home-rtm-preview{transition:transform .35s ease,box-shadow .35s ease}
+@media(hover:hover) and (pointer:fine){.home-rtm-preview:hover{transform:translateY(-4px);box-shadow:0 26px 46px -18px #14140f66}}
+@media(prefers-reduced-motion:reduce){.home-rtm-preview{transition:none!important;transform:none!important}}

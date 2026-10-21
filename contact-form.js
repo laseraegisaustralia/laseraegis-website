@@ -20,6 +20,7 @@
   };
 
   const topics = {
+    rtm: "RTM software — demo, evaluation or licensing",
     rf: "RF power amplifier (Commodore or Commercial series)",
     arm1: "Commodore ARM I HF/VHF amplifier",
     laser: "Laser rangefinder, illuminator or EO payload",
@@ -46,12 +47,13 @@
       const typeValue = document.getElementById("contactType").value;
       const subjectInput = form.querySelector('input[name="subject"]');
       if (subjectInput) subjectInput.value = "New enquiry (" + typeValue + ") — LaserAegis Australia";
+      window.LaserAegisAttribution?.fillForm(form);
       const response = await fetch("https://api.web3forms.com/submit", { method: "POST", body: new FormData(form) });
       const result = await response.json();
       if (!response.ok || !result.success) throw new Error("Submission failed");
       form.hidden = true;
       document.getElementById("contactSuccess").hidden = false;
-      if (typeof window.gtag === "function") window.gtag("event", "contact_submit", { source_page: "contact.html", enquiry_type: typeValue });
+      if (typeof window.gtag === "function") window.gtag("event", "contact_submit", { source_page: "contact.html", enquiry_type: typeValue, request_type: typeValue.startsWith("RTM") ? "rtm_contact" : "general_contact", ...window.LaserAegisAttribution?.eventFields() });
     } catch (error) {
       status.textContent = "We could not send your message. Please try again or email xander@laseraegis.dev.";
       button.disabled = false;

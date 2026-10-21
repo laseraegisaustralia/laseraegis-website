@@ -195,3 +195,26 @@ body p.label{font-family:var(--font-sans);font-size:11px;line-height:1.5;letter-
 @media(min-width:601px) and (max-width:900px){
   .howworks-head h2,.diagram-band-head h2,.decision-block .body-dark{white-space:normal}
 }
+
+.rtm-delivery-link{margin-top:18px}.rtm-browser-chrome{display:flex;align-items:center;gap:8px;height:34px;padding:0 15px;background:#10151b}.rtm-browser-chrome i{display:block;width:8px;height:8px;background:#69717b;border-radius:50%}
+
+/* RTM is a visible software business line in the shared footer. */
+.footer-nav{gap:36px}.footer-nav .footer-rtm{border-left:1px solid #66502a;padding-left:25px}.footer-nav .footer-rtm>a:first-of-type{color:#e0b76b;font-weight:500}@media(max-width:600px){.footer-nav .footer-rtm{padding-left:0;border-left:0}}
+
+/* Equal footer groups, including RTM. */
+.footer .footer-nav{gap:48px}.footer .footer-nav>div{min-width:150px}.footer .footer-nav .footer-rtm{padding:0;border:0}.footer .footer-nav .footer-rtm>a:first-of-type{font-size:14px;font-weight:400;color:rgba(255,255,255,.75)}.footer .footer-nav .footer-rtm>a:hover{color:var(--gold)}@media(max-width:600px){.footer .footer-nav{gap:24px 20px}.footer .footer-nav>div{min-width:0}}
+
+/* Four equal-width footer tracks keep every column at the same interval. */
+.footer .footer-nav{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));column-gap:36px;row-gap:28px;max-width:1100px;margin-inline:auto}.footer .footer-nav>div{min-width:0}.footer .footer-nav a{line-height:1.6}
+@media(max-width:900px){.footer .footer-nav{grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 32px;max-width:640px}}@media(max-width:600px){.footer .footer-nav{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 20px}}
+
+/* V4.7: compact, equal-width footer columns based on the original spacing. */
+.footer .footer-nav{grid-template-columns:repeat(4,minmax(0,200px));justify-content:center;max-width:920px;column-gap:40px;row-gap:24px}
+@media(max-width:1000px) and (min-width:761px){.footer .footer-nav{grid-template-columns:repeat(4,minmax(0,1fr));column-gap:24px}}
+@media(max-width:760px){.footer .footer-nav{grid-template-columns:repeat(2,minmax(0,1fr));column-gap:24px;row-gap:24px;max-width:560px}}
+
+/* V4.10.1: keep category image panels aligned with intrinsic dimensions. */
+.cat-card>img,.cat-card>.series-pair{aspect-ratio:4/3;height:auto}
+.cat-card>.series-pair{padding:14px 10px}
+.cat-card>.series-pair .series-pair-item{min-height:0;grid-template-rows:minmax(0,1fr) auto}
+.cat-card>.series-pair img{height:100%;min-height:0;aspect-ratio:auto;object-fit:contain}

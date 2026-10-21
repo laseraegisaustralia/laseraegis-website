@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://laseraegis.dev/</loc><lastmod>2026-10-14</lastmod></url>
-  <url><loc>https://laseraegis.dev/capabilities.html</loc><lastmod>2026-10-15</lastmod></url>
+  <url><loc>https://laseraegis.dev/</loc><lastmod>2026-10-19</lastmod></url>
+  <url><loc>https://laseraegis.dev/capabilities.html</loc><lastmod>2026-10-19</lastmod></url>
   <url><loc>https://laseraegis.dev/capabilities/rf-systems/</loc><lastmod>2026-10-14</lastmod></url>
   <url><loc>https://laseraegis.dev/capabilities/laser-systems/</loc><lastmod>2026-10-14</lastmod></url>
   <url><loc>https://laseraegis.dev/products.html</loc><lastmod>2026-10-15</lastmod></url>
-  <url><loc>https://laseraegis.dev/rtm.html</loc><lastmod>2026-10-14</lastmod></url>
-  <url><loc>https://laseraegis.dev/contact.html</loc><lastmod>2026-10-14</lastmod></url>
+  <url><loc>https://laseraegis.dev/rtm.html</loc><lastmod>2026-10-21</lastmod></url>
+  <url><loc>https://laseraegis.dev/contact.html</loc><lastmod>2026-10-19</lastmod></url>
   <url><loc>https://laseraegis.dev/commodore.html</loc><lastmod>2026-10-14</lastmod></url>
   <url><loc>https://laseraegis.dev/commercial.html</loc></url>
   <url><loc>https://laseraegis.dev/commodore-10w.html</loc><lastmod>2026-10-14</lastmod></url>
@@ -21,10 +21,13 @@
   <url><loc>https://laseraegis.dev/laser-lrf.html</loc></url>
   <url><loc>https://laseraegis.dev/laser-illuminator.html</loc></url>
   <url><loc>https://laseraegis.dev/laser-eo-payloads.html</loc></url>
-  <url><loc>https://laseraegis.dev/insights/</loc><lastmod>2026-10-14</lastmod></url>
+  <url><loc>https://laseraegis.dev/insights/</loc><lastmod>2026-10-19</lastmod></url>
   <url><loc>https://laseraegis.dev/insights/rf-amplifiers-lasers/</loc></url>
   <url><loc>https://laseraegis.dev/insights/adjustable-bias-rf-power-amplifier-class-a-ab/</loc><lastmod>2026-10-14</lastmod></url>
-  <url><loc>https://laseraegis.dev/about/</loc><lastmod>2026-10-14</lastmod></url>
+  <url><loc>https://laseraegis.dev/about/</loc><lastmod>2026-10-19</lastmod></url>
   <url><loc>https://laseraegis.dev/commodore-arm1/</loc><lastmod>2026-10-15</lastmod></url>
   <url><loc>https://laseraegis.dev/commodore-rf-modules/</loc><lastmod>2026-10-15</lastmod></url>
+  <url><loc>https://laseraegis.dev/rtm/workflows/</loc><lastmod>2026-10-21</lastmod></url>
+  <url><loc>https://laseraegis.dev/rtm/pricing/</loc><lastmod>2026-10-21</lastmod></url>
+  
 </urlset>
