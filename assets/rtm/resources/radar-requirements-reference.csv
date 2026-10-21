@@ -1,0 +1,19 @@
+﻿ID,Title,Category,Priority,Statement,Parent,Owner
+LA-001,Detection range,Performance,CRITICAL,The radar shall detect a 1 m2 target at 100 km with Pd >= 0.9 and Pfa <= 1e-6.,ITT-001,
+LA-002,Track update rate,Performance,HIGH,The radar shall provide a track update rate of at least 1 Hz.,ITT-002,j.smith
+LA-003,Transmitter peak power,Performance,CRITICAL,The transmitter shall deliver peak power of at least 10 kW across 9.0 to 9.5 GHz.,ITT-003,j.smith
+LA-004,Operating temperature,Other,MEDIUM,The radar shall operate from -40 to +70 degC in accordance with MIL-STD-810H.,ITT-004,m.jones
+LA-005,Transmit power loss report,Functional,HIGH,The radar shall report loss of transmit power within 2 seconds.,ITT-005,a.chen
+LA-006,Track data interface,Interface,HIGH,The radar shall deliver track data over Ethernet as defined in the ICD.,ITT-006,a.chen
+LA-007,Weight-on-wheels inhibit,Safety,CRITICAL,The radar shall not radiate when weight-on-wheels is asserted.,ITT-007,m.jones
+LA-008,Radiated emissions,Safety,HIGH,Radiated emissions shall comply with ARPANSA RPS S-1.,ITT-008,m.jones
+LA-009,Plot latency,Performance,HIGH,The signal processor shall deliver plots to the tracker within 100 ms of dwell completion.,ITT-009,a.chen
+LA-010,Mean time to repair,Maintainability,MEDIUM,The mean time to repair shall not exceed 30 minutes.,ITT-010,m.jones
+LA-011,Power input,Functional,HIGH,The radar shall accept 28 V DC power conditioned per MIL-STD-704F.,ITT-011,j.smith
+LA-012,Receiver noise figure,Performance,HIGH,The receiver noise figure shall not exceed 3.0 dB.,LA-001,j.smith
+LA-013,Antenna gain,Performance,HIGH,The antenna gain shall be at least 34 dBi.,LA-001,j.smith
+LA-014,Transmitter cooling,Performance,MEDIUM,The cooling system shall remove 3 kW of transmitter heat at +70 degC ambient.,LA-003,j.smith
+LA-015,PSU efficiency,Performance,MEDIUM,The power supply efficiency shall be at least 90 percent at rated load.,LA-011,j.smith
+LA-016,Track message rate,Interface,MEDIUM,The track data interface shall publish track messages at 10 Hz over UDP.,LA-006,a.chen
+LA-017,Forward-power monitor,Functional,HIGH,Built-in test shall detect transmit power loss using a forward-power sensor.,LA-005,a.chen
+LA-018,WoW input debounce,Safety,HIGH,The weight-on-wheels input shall be debounced within 50 ms.,LA-007,m.jones
