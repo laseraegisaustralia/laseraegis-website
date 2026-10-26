@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Custom RF Amplifier Specification Guide | LaserAegis</title><meta name="description" content="Specify a custom RF amplifier by defining power, waveform, cooling, interfaces and verification needs—and identifying what actually needs to change.">
+<link rel="canonical" href="https://laseraegis.dev/insights/custom-rf-amplifier-specification/">
+<meta property="og:type" content="article"><meta property="og:title" content="Specifying a Custom RF Amplifier: What Actually Needs to Change?"><meta property="og:description" content="Specify a custom RF amplifier by defining power, waveform, cooling, interfaces and verification needs—and identifying what actually needs to change."><meta property="og:url" content="https://laseraegis.dev/insights/custom-rf-amplifier-specification/"><meta property="og:image" content="https://laseraegis.dev/images/custom-rf-amplifier-cover.png"><meta property="og:image:alt" content="Custom RF amplification: application-led engineering, with a Commodore Series reference image.">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Specifying a Custom RF Amplifier: What Actually Needs to Change?"><meta name="twitter:description" content="Specify a custom RF amplifier by defining power, waveform, cooling, interfaces and verification needs—and identifying what actually needs to change."><meta name="twitter:image" content="https://laseraegis.dev/images/custom-rf-amplifier-cover.png"><meta name="twitter:image:alt" content="Custom RF amplification: application-led engineering, with a Commodore Series reference image."><meta property="article:published_time" content="2026-10-26"><meta property="og:locale" content="en_AU"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><link rel="icon" href="../../images/favicon.ico">
+<link rel="stylesheet" href="../../assets/fonts/fonts.css"><link rel="stylesheet" href="../../style.css"><link rel="stylesheet" href="../../insights.css"><link rel="stylesheet" href="../../custom-rf-article.css"><script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BlogPosting","@id":"https://laseraegis.dev/insights/custom-rf-amplifier-specification/#article","headline":"Specifying a Custom RF Amplifier: What Actually Needs to Change?","description":"Specify a custom RF amplifier by defining power, waveform, cooling, interfaces and verification needs—and identifying what actually needs to change.","image":["https://laseraegis.dev/images/custom-rf-amplifier-cover.png"],"datePublished":"2026-10-26","dateModified":"2026-10-26","author":{"@type":"Organization","name":"LaserAegis Australia","url":"https://laseraegis.dev/about/"},"publisher":{"@type":"Organization","name":"LaserAegis Australia","logo":{"@type":"ImageObject","url":"https://laseraegis.dev/images/logo.png"}},"mainEntityOfPage":"https://laseraegis.dev/insights/custom-rf-amplifier-specification/","articleSection":"RF Amplifiers & Lasers","inLanguage":"en-AU"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Insights & News","item":"https://laseraegis.dev/insights/"},{"@type":"ListItem","position":2,"name":"RF Amplifiers & Lasers","item":"https://laseraegis.dev/insights/rf-amplifiers-lasers/"},{"@type":"ListItem","position":3,"name":"Specifying a Custom RF Amplifier: What Actually Needs to Change?","item":"https://laseraegis.dev/insights/custom-rf-amplifier-specification/"}]}]}</script><!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KSHB982GC9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-KSHB982GC9');
+</script>
+<link rel="stylesheet" href="../../company.css"/>
+<link rel="stylesheet" href="../../rtm-navigation.css">
+<script src="../../lead-attribution.js"></script></head><body class="insights-page"><a class="skip-link" href="#main">Skip to content</a><nav class="nav" aria-label="Main navigation">
+  <a class="nav-logo" href="../../" aria-label="LaserAegis Australia home"><img src="../../images/logo.png" alt="LaserAegis Australia"/></a>
+  <ul class="nav-links" id="navLinks">
+    <li class="has-dropdown"><a href="../../capabilities.html">Capabilities</a><ul class="dropdown"><li><a href="../../capabilities/rf-systems/">RF Amplifier Systems</a></li><li><a href="../../capabilities/laser-systems/">Laser Systems</a></li><li><a href="../../capabilities.html#delivery">Engineering &amp; Delivery</a></li></ul></li>
+    <li class="has-dropdown"><a href="../../products.html">Products</a><ul class="dropdown"><li><a href="../../commodore.html">Commodore Series RF Amplifiers</a></li><li><a href="../../commercial.html">Commercial Series RF Amplifiers</a></li><li><a href="../../laser.html">Laser Modules</a></li></ul></li>
+    <li class="has-dropdown rtm-nav-item"><a href="../../rtm.html">RTM Software</a><button class="rtm-dropdown-toggle" type="button" aria-expanded="false" aria-controls="rtmDropdown" aria-label="Show RTM pages"><span aria-hidden="true"></span></button><ul class="dropdown" id="rtmDropdown"><li><a href="../../rtm.html">Overview</a></li><li><a href="../../rtm/workflows/">Features &amp; Workflows</a></li><li><a href="../../rtm/pricing/">Licensing &amp; Pilots</a></li></ul></li>
+    <li><a href="../../insights/" class="active" aria-current="page">Insights</a></li>
+    <li><a href="../../about/">About</a></li>
+    <li><a href="../../contact.html" class="nav-contact">Contact Us</a></li>
+  </ul>
+  <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-controls="navLinks" aria-expanded="false"><span></span><span></span><span></span></button>
+</nav>
+<div class="reading-progress" aria-hidden="true"><span id="readingProgress"></span></div><main id="main"><header class="article-header insights-wrap"><nav class="article-crumbs" aria-label="Breadcrumb"><a href="../">Insights</a><span>/</span><a href="../rf-amplifiers-lasers/">RF Amplifiers &amp; Lasers</a></nav><p class="eyebrow">Engineering Insights · Custom RF Amplifiers</p><h1>Specifying a Custom RF Amplifier: What Actually Needs to Change?</h1><p class="article-deck">Identify the performance gap, define the scope of change and agree how the delivered solution will be verified.</p><div class="article-byline"><img class="author-brand" src="../../images/author-logo.png" width="64" height="64" alt="LaserAegis Australia logo"><div><strong>LaserAegis Australia</strong><span>RF &amp; laser systems engineering</span></div><div class="byline-date"><time datetime="2026-10-26">26 October 2026</time><span>8 min read</span></div></div></header><figure class="article-visual insights-wrap custom-rf-visual"><div class="article-image-stage"><div class="image-side-note"><span>CUSTOM / RF</span><strong>Custom RF amplification.<br> Defined by the application.</strong></div><img src="../../images/commodore-black-700.webp" alt="Commodore Series RF amplifier module, shown as a product range reference" fetchpriority="high" width="700" height="935" decoding="async" srcset="../../images/commodore-black-400.webp 400w, ../../images/commodore-black-700.webp 700w" sizes="(max-width: 760px) calc(100vw - 48px), 500px"></div><figcaption>Commodore Series reference image. The delivered configuration depends on the application.</figcaption></figure><div class="article-layout insights-wrap"><aside class="article-sidebar"><details open><summary>In this article</summary><nav aria-label="Article contents"><a href="#performance-gap"><span>01</span>Establish the performance gap</a><a href="#system-change"><span>02</span>Locate the change in the system</a><a href="#customisation-scope"><span>03</span>Set the scope of customisation before committing hardware</a><a href="#delivery-boundary"><span>04</span>Define what the customer will receive</a><a href="#design-basis"><span>05</span>Keep the design basis available after delivery</a><a href="#working-with-laseraegis"><span>06</span>Working with LaserAegis Australia</a></nav></details><a class="sidebar-contact" href="../../request.html?product=Custom+RF+Amplifier&request_type=technical&source_page=/insights/custom-rf-amplifier-specification/">Discuss your RF requirements <span aria-hidden="true">↗</span></a></aside><article class="article-body"><p class="article-lead">A request for a custom RF amplifier can describe several different problems. The required linear output power may exceed what an available module can deliver. The RF performance may be suitable, but the module cannot reject heat into the proposed installation. Or the customer may need a complete rack assembly, with power supplies, filtering and remote control, around an otherwise standard amplifier.</p>
+<p>Each problem calls for a different engineering response. Replacing the RF design will not resolve an inadequate cooling interface. Adding a controller will not recover output power lost to compression.</p>
+<p>The useful starting point is to identify the requirement that the available hardware cannot meet. That establishes what can be retained, what needs to change and how the resulting solution will be verified.</p>
+<section id="performance-gap"><h2>Establish the performance gap</h2>
+<p>“100 W output” is incomplete without its operating conditions. It could mean saturated CW power, peak pulse power or average output while meeting a specified distortion limit. Those requirements can lead to different amplifier choices.</p>
+<p>For a modulated signal, the available linear output depends on the waveform and acceptable distortion. Operating further below saturation may improve linearity, but it also changes efficiency and the power available to the application. A larger nominal rating is therefore useful only if the amplifier meets the required performance at the intended operating point.</p>
+<p>The same care applies to pulsed operation. Duty cycle alone does not define the thermal requirement: pulse duration and repetition rate also affect the temperature reached within the device. Two operating sequences with the same average duty cycle can require different thermal assessments.</p>
+<p>Before choosing a product or proposing changes, establish:</p>
+<ul>
+<li>the frequency band and required performance across it;</li>
+<li>output power, its measurement point and the applicable linearity limit;</li>
+<li>waveform, pulse timing and longest operating sequence;</li>
+<li>available input drive and DC supply conditions;</li>
+<li>expected load mismatch;</li>
+<li>cooling conditions at the amplifier interface.</li>
+</ul>
+<p>These inputs provide a basis for comparing measured or specified performance. Any missing information should remain an explicit assumption until it can be resolved.</p>
+</section><section id="system-change"><h2>Locate the change in the system</h2>
+<p>Once the gap is understood, the engineering team can decide where to address it.</p>
+<p>Consider an illustrative requirement for 100 W at a subsystem output connector. If a filter and cable after the amplifier introduce 1 dB of loss, the amplifier must deliver approximately 126 W before those losses, even before adding design margin. A 100 W module cannot meet that requirement at the specified measurement point.</p>
+<p>The next decision is whether to reduce the path loss or increase amplifier output. Increasing power may also increase supply demand and heat dissipation. Reducing loss could preserve the existing amplifier, although the alternative filter must still meet its rejection requirement.</p>
+<p>Other gaps lead elsewhere:</p>
+<div class="comparison-wrap"><table class="bias-table">
+<thead>
+<tr>
+<th scope="col">Requirement gap</th>
+<th scope="col">Engineering response to assess</th>
+<th scope="col">Evidence needed</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Required distortion limit is missed at target output</td>
+<td><a href="../../insights/adjustable-bias-rf-power-amplifier-class-a-ab/">Operating point</a>, amplifier selection or RF redesign</td>
+<td>Performance with the specified waveform and output level</td>
+</tr>
+<tr>
+<td>Module exceeds its thermal limit in the installation</td>
+<td>Mounting interface, heat spreading, cooling provision or amplifier efficiency</td>
+<td>Thermal behaviour in the representative installation</td>
+</tr>
+<tr>
+<td>Platform cannot command or monitor the amplifier</td>
+<td>Interface electronics, controller or firmware changes</td>
+<td>Command handling, telemetry and fault-response tests</td>
+</tr>
+<tr>
+<td>Customer needs several channels in one assembly</td>
+<td>Shared power, cooling, RF isolation and supervisory control</td>
+<td>Behaviour with relevant channels operating together</td>
+</tr>
+<tr>
+<td>Packaging cannot accommodate the module</td>
+<td>Mechanical adaptation or alternative architecture</td>
+<td>RF and thermal performance after integration</td>
+</tr>
+</tbody></table></div>
+<p>The preferred solution may retain the existing RF hardware and change the surrounding assembly. It may also require a revised amplifier design. The distinction should follow the requirement and supporting evidence.</p>
+</section><section id="customisation-scope"><h2>Set the scope of customisation before committing hardware</h2>
+<p>An existing design is valuable when its known performance remains relevant to the new application. Reusing it can reduce development work, but only if the modifications preserve the assumptions behind that performance.</p>
+<p>A connector relocation deserves a review of RF routing, grounding and assembly access. A different heatsink changes the thermal boundary. A higher-power device can affect matching, bias, stability, current demand and protection. Changing restart behaviour after a fault requires agreement with the platform controller.</p>
+<p>For a proposed adaptation, establish three things early:</p>
+<ol>
+<li>Which parts of the design and supporting evidence can be reused?</li>
+<li>Which changes introduce new uncertainty?</li>
+<li>Which analyses and tests will close that uncertainty?</li>
+</ol>
+<p>If an adaptation requires substantial changes to the RF stages, supply, controls and mechanical arrangement, compare it with a new design before committing to the existing platform. Familiar hardware does not automatically mean a smaller development programme.</p>
+<p>An unchanged commercial off-the-shelf amplifier remains a valid outcome. Where it meets the application, the remaining work may consist of confirming interfaces, defining acceptance conditions and arranging support. A good first check is whether a product in LaserAegis&#39;s <a href="../../commodore.html">RF amplifier range</a> already fits. Custom engineering effort should be directed towards an identified gap.</p>
+</section><section id="delivery-boundary"><h2>Define what the customer will receive</h2>
+<p>The required delivery may be an amplifier module, a packaged unit or an integrated RF subsystem. That boundary affects both the engineering scope and the customer’s remaining work.</p>
+<p>For a subsystem, responsibilities may extend to power conversion, filters, switching, sensing, cooling and supervisory control. These functions need agreed behaviour at their interfaces.</p>
+<p>For example, “VSWR protection” leaves several questions open. Does a mismatch cause reduced output or a latched shutdown? What information reaches the host controller? Under what conditions can transmission resume? How will that sequence be demonstrated during acceptance?</p>
+<p>A useful proposal should identify the delivered configuration, interface responsibilities, operating limits and verification scope. It should also identify customer-supplied items, such as a cold plate or power source, whose characteristics affect performance.</p>
+<p>Manufacturing and test responsibilities should be equally clear. Design ownership, assembly location, production testing and specialist environmental testing are separate matters. The customer needs to understand who controls each activity and which records accompany the hardware. This allows procurement teams to compare the work included in competing offers. A module price and a subsystem price are meaningful only alongside the integration and testing that each leaves to the customer.</p>
+<p>On LaserAegis programmes, we design the amplifier and carry out its assembly, with specialist manufacturing partners supporting where the programme requires it. RF performance and pre-compliance verification are performed in-house. Where formal EMC or environmental qualification is needed, we arrange it with qualified or accredited partner facilities, and their test reports can be included in the delivery documentation agreed for the project.</p>
+</section><section id="design-basis"><h2>Keep the design basis available after delivery</h2>
+<p>The requirements baseline, interface definitions, approved configuration and test results remain useful throughout the product’s life.</p>
+<p>Return to the 100 W example. With 1 dB of loss between the amplifier and the output connector, the amplifier needed to deliver about 126 W. Suppose the filter is later replaced with one that loses 1.5 dB, even though it still meets the rejection requirement. The same 100 W at the connector now needs about 141 W from the amplifier (100 × 10^(1.5/10) ≈ 141.3 W), around 12% more, again before any design margin.</p>
+<p>That extra half a decibel reaches well beyond output power. The higher level typically means more supply current, more heat to remove and different margins against the protection thresholds. The thermal results and acceptance measurements recorded for the original configuration no longer describe the new operating point.</p>
+<p>With the design basis to hand, the response can be defined quickly: compare the new requirement with the margin the original design held, repeat the affected measurements (output power and linearity at the new level, thermal behaviour, protection thresholds) and record the results against the revised configuration. Without it, the first task is to reconstruct what the original assumptions were.</p>
+<p>Other changes follow the same pattern. A replacement component may require an assessment of gain, stability or thermal behaviour. A revised waveform can change the usable output or cooling requirement. Repeat orders need a defined configuration and agreed acceptance criteria. An in-service fault is easier to investigate when the delivered unit can be related to its design and test records.</p>
+<p>Design Authority provides technical responsibility for these decisions within the agreed scope. Lifecycle support should specify how changes are assessed, when further testing is required and how maintenance or replacement needs will be handled.</p>
+<p>The customer can then discuss a change with an engineering team that understands the basis of the supplied solution.</p>
+</section><section id="working-with-laseraegis"><h2>Working with LaserAegis Australia</h2>
+<p>LaserAegis Australia combines RF amplifier products with in-house design and architecture-level engineering. We work with customers to establish the requirement, assess available designs and define the customisation needed for the application.</p>
+<p>That work can cover an amplifier configuration or the wider subsystem around it. Our <a href="../../capabilities.html">Design Authority role</a> connects the agreed design with integration, verification and validation, acceptance, commissioning and ongoing support. The scope of each engagement establishes the responsibilities, deliverables and lifecycle services required.</p>
+<p>For an initial discussion, send the frequency band, required output and measurement point, waveform, duty cycle, supply, cooling conditions, mechanical constraints and control interface. Include expected quantities, delivery needs and any required test evidence.</p>
+<p>If part of the specification is still open, identify it. <a href="../../contact.html">We can help resolve the engineering questions and determine the appropriate amplifier solution.</a></p>
+</section></article></div><section class="related-resources insights-wrap"><p class="eyebrow">Continue exploring</p><h2>From the article to your application</h2><div class="resource-grid"><a href="../../commodore.html"><span>PRODUCT RANGE</span><h3>Commodore Series</h3><p>Explore the existing RF amplifier range.</p><b aria-hidden="true">↗</b></a><a href="../../capabilities.html"><span>ENGINEERING</span><h3>Integration &amp; verification</h3><p>See how LaserAegis supports RF systems.</p><b aria-hidden="true">↗</b></a></div><a class="back-link" href="../">← All insights &amp; news</a></section></main><footer class="footer"><div class="footer-inner"><div class="footer-logo"><img src="../../images/logo.png" alt="LaserAegis Australia"/></div>
+    <nav class="footer-nav" aria-label="Footer"><div><p class="footer-nav-title">Products</p><a href="../../commodore.html">Commodore Series</a><a href="../../commercial.html">Commercial Series</a><a href="../../laser.html">Laser Modules</a></div><div><p class="footer-nav-title">Capabilities</p><a href="../../capabilities/rf-systems/">RF Amplifier Systems</a><a href="../../capabilities/laser-systems/">Laser Systems</a><a href="../../capabilities.html#delivery">Engineering &amp; Delivery</a></div><div><p class="footer-nav-title">Company</p><a href="../../about/">About</a><a href="../../insights/">Insights</a><a href="../../contact.html">Contact</a></div><div class="footer-rtm"><p class="footer-nav-title">RTM Software</p><a href="../../rtm.html">RTM Overview</a><a href="../../rtm/workflows/">Features &amp; Workflows</a><a href="../../rtm/pricing/">Licensing &amp; Pilots</a></div></nav><div class="footer-contacts"><div class="footer-contact-item"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24 11.47 11.47 0 003.58.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.47 11.47 0 00.57 3.57 1 1 0 01-.25 1.02l-2.2 2.2z"/></svg><a href="tel:+61451986931">+61 451 986 931</a></div><div class="footer-contact-item"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg><a href="mailto:xander@laseraegis.dev">xander@laseraegis.dev</a></div><div class="footer-contact-item"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z M4 6a2 2 0 100-4 2 2 0 000 4z"/></svg><a href="https://www.linkedin.com/company/laseraegis-australia" target="_blank" rel="noopener">@LaserAegis Australia</a></div></div><p class="footer-insights"><a href="../">Insights &amp; News</a></p><p class="footer-copy">&copy; 2026 LaserAegis Australia. ABN 64 693 917 814. All rights reserved.</p></div></footer><script src="../../insights.js" defer></script><script src="../../local-preview.js"></script>
+<script src="../../fit-h1.js" defer></script>
+<script src="../../rtm-navigation.js" defer></script>
+</body></html>

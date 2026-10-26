@@ -1,0 +1,8 @@
+/* Blog 2: match the first Engineering Insight cover. */
+.custom-rf-visual .image-side-note strong{font-family:'IBM Plex Serif',serif;font-weight:400}
+.custom-rf-visual .image-side-note span{font-family:'IBM Plex Sans',sans-serif}
+.article-header h1{font-family:'IBM Plex Serif',serif}
+.article-body ol{padding-left:25px;margin-bottom:25px}.article-body ol li::marker{color:#82601c}
+
+/* Keep both discipline cards readable on narrow screens. */
+@media(max-width:600px){.explore-section .topic-cards{grid-template-columns:1fr}.explore-section .topic-card{padding:22px 0}.explore-section .topic-card+.topic-card{border-left:0;border-top:1px solid var(--line);padding:22px 0}.explore-section .topic-card h3{font-size:27px}}
