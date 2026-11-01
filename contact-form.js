@@ -3,10 +3,10 @@
   const form = document.getElementById("generalContactForm");
   if (!form) return;
 
-  const fields = ["contactName", "contactEmail", "contactCompany", "contactType", "contactMessage"];
+  const fields = () => Array.from(form.querySelectorAll("[required][id]")).map(input => input.id);
   const validate = () => {
     let valid = true;
-    fields.forEach((id) => {
+    fields().forEach((id) => {
       const input = document.getElementById(id);
       const error = input.parentElement.querySelector(".field-error");
       let message = "";
@@ -31,7 +31,8 @@
   const topic = new URLSearchParams(window.location.search).get("topic");
   if (topic && topics[topic]) document.getElementById("contactType").value = topics[topic];
 
-  fields.forEach((id) => { const el = document.getElementById(id); el.addEventListener("input", validate); el.addEventListener("change", validate); });
+  form.addEventListener("input", event => { if (event.target.matches("[required]")) validate(); });
+  form.addEventListener("change", event => { if (event.target.matches("[required]")) validate(); });
   form.addEventListener("submit", async (event) => {
     event.preventDefault();
     if (!validate()) {
@@ -57,7 +58,7 @@
     } catch (error) {
       status.textContent = "We could not send your message. Please try again or email xander@laseraegis.dev.";
       button.disabled = false;
-      button.innerHTML = 'Submit <span aria-hidden="true">&rarr;</span>';
+      button.textContent = form.querySelector('[name="request_type"]').value === 'repairs and servicing enquiry' ? 'Send service enquiry →' : 'Submit →';
     }
   });
 

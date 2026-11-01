@@ -1,0 +1,22 @@
+(()=>{
+ if(new URLSearchParams(location.search).get('topic')!=='service-repairs')return;
+ const form=document.getElementById('generalContactForm');if(!form)return;
+ document.body.classList.add('service-contact-mode');
+ document.getElementById('contactType').value='Repairs & Servicing';
+ document.querySelector('.contact-col-left h1').textContent='Tell us about your equipment';
+ document.querySelector('.contact-col-left>p').textContent='A short description is enough to start. Speak directly with an engineer about the fault, possible assessment options and the next step. Partial details are welcome.';
+ document.querySelector('.contact-direct span').textContent='We reply to service enquiries within one business day. Assessment and repair timing are agreed after review.';
+ const org=document.getElementById('contactCompany');org.required=false;
+ document.querySelector('label[for="contactCompany"]').textContent='Organization (optional)';
+ document.querySelector('label[for="contactMessage"]').innerHTML='What’s happening? <span aria-hidden="true">*</span>';
+ document.getElementById('contactMessage').placeholder='Describe the symptoms, error code or service required. Tell us if the equipment is out of operation. No technical diagnosis is needed.';
+ form.querySelector('[name="request_type"]').value='repairs and servicing enquiry';
+ form.querySelector('[name="subject"]').value='Repairs & Servicing enquiry — LaserAegis Australia';
+ const details=form.querySelector('.form-details');if(details)details.remove();
+ const fields=document.createElement('div');fields.className='service-equipment-fields';
+ fields.innerHTML=`<div class="form-row-2"><div class="form-field"><label for="serviceManufacturer">Equipment manufacturer <span aria-hidden="true">*</span></label><input id="serviceManufacturer" name="equipment_manufacturer" type="text" placeholder="Enter unknown if unsure" required aria-describedby="serviceEquipmentHint"><span class="field-error" aria-live="polite"></span></div><div class="form-field"><label for="serviceModel">Equipment model <span aria-hidden="true">*</span></label><input id="serviceModel" name="equipment_model" type="text" placeholder="Enter unknown if unsure" required aria-describedby="serviceEquipmentHint"><span class="field-error" aria-live="polite"></span></div></div><p id="serviceEquipmentHint" class="service-field-hint">Not sure of the make or model? Enter “unknown” — you can send a nameplate photo by email later.</p><div class="form-row-2"><div class="form-field"><label for="serviceState">State / territory <span aria-hidden="true">*</span></label><select id="serviceState" name="equipment_state" required><option value="">Select location</option><option>ACT</option><option>NSW</option><option>NT</option><option>QLD</option><option>SA</option><option>TAS</option><option>VIC</option><option>WA</option><option>Outside Australia</option><option>Not confirmed yet</option></select><span class="field-error" aria-live="polite"></span></div><div class="form-field"><label for="serviceLocation">City / suburb or country (optional)</label><input id="serviceLocation" name="equipment_location" type="text" placeholder="Equipment location"><span class="field-error" aria-live="polite"></span></div></div>`;
+ document.getElementById('contactMessage').closest('.form-field').before(fields);
+ document.querySelector('.form-privacy').textContent='We use your details to respond to this enquiry. Share only information you are authorised to release; please arrange sharing of sensitive or controlled documents with us first.';
+ document.querySelector('#contactSuccess p').textContent='Thank you. An engineer will review your enquiry and reply within one business day. Assessment and repair arrangements will be confirmed with you.';
+ document.getElementById('contactSubmitButton').textContent='Send service enquiry →';
+})();

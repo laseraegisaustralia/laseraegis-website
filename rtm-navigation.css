@@ -9,3 +9,7 @@
 .rtm-dropdown-toggle:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
 @media(hover:hover) and (min-width:901px){.nav-links .rtm-nav-item:not([data-open="false"]):hover>.dropdown{display:block}}
 @media(max-width:900px){.nav-links .rtm-nav-item{display:grid;grid-template-columns:1fr 52px;gap:0}.nav-links .rtm-nav-item>a{padding:14px 24px;display:block}.rtm-dropdown-toggle{height:46px;width:44px}.nav-links .rtm-nav-item>.dropdown{grid-column:1/-1;position:static;min-width:0}.nav-links .rtm-nav-item>.dropdown a{padding:12px 24px 12px 40px}.rtm-dropdown-toggle[aria-expanded="true"]{color:var(--gold)}}
+/* Use the same glyph and size as Capabilities and Products. */
+.rtm-dropdown-toggle span{width:auto;height:auto;border:0;margin-top:0;font-size:10px;line-height:normal;font-family:var(--font-sans);letter-spacing:.12em;color:rgba(255,255,255,.75)}
+.rtm-dropdown-toggle span::before{content:'▾'}
+.rtm-dropdown-toggle[aria-expanded="true"] span{color:var(--gold)}
