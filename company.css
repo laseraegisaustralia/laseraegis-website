@@ -218,3 +218,19 @@ body p.label{font-family:var(--font-sans);font-size:11px;line-height:1.5;letter-
 .cat-card>.series-pair{padding:14px 10px}
 .cat-card>.series-pair .series-pair-item{min-height:0;grid-template-rows:minmax(0,1fr) auto}
 .cat-card>.series-pair img{height:100%;min-height:0;aspect-ratio:auto;object-fit:contain}
+
+/* About hero: RF PCB background (2026-11-16). Image sits on the right and fades into the dark base so the text stays on a near-solid background. */
+.about-hero{position:relative;overflow:hidden;isolation:isolate}
+.about-hero::before{content:"";position:absolute;top:0;right:0;bottom:0;width:min(62%,900px);background:url("images/about-rf-pcb.webp") center/cover no-repeat;opacity:.7;filter:saturate(.9) brightness(.95);z-index:-2}
+.about-hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#0b0e12 0%,#0b0e12 36%,rgba(11,14,18,.7) 58%,rgba(11,14,18,.2) 100%),linear-gradient(0deg,rgba(11,14,18,.5) 0%,rgba(11,14,18,0) 30%);z-index:-1}
+@media(max-width:900px){.about-hero::before{width:100%;opacity:.35}.about-hero::after{background:linear-gradient(180deg,rgba(11,14,18,.78) 0%,rgba(11,14,18,.88) 100%)}}
+
+/* Inline links in the RF systems hero and spec cards (2026-11-16). */
+.page-hero-inner p a{color:var(--gold);text-decoration:underline;text-underline-offset:4px}
+.spec-card td a{color:#865f16;text-decoration:underline;text-underline-offset:3px}
+
+/* Capabilities hero: RF PCB background (2026-11-17). The hero text spans the full width, so the image sits on the right and stays under a darker overlay than on About. */
+.cap-hero{position:relative;overflow:hidden;isolation:isolate}
+.cap-hero::before{content:"";position:absolute;top:0;right:0;bottom:0;width:min(55%,860px);background:url("images/about-rf-pcb.webp") center/cover no-repeat;opacity:.6;filter:saturate(.85) brightness(.9);z-index:-2}
+.cap-hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#0b0e12 0%,#0b0e12 42%,rgba(11,14,18,.8) 62%,rgba(11,14,18,.45) 100%);z-index:-1}
+@media(max-width:900px){.cap-hero::before{width:100%;opacity:.3}.cap-hero::after{background:linear-gradient(180deg,rgba(11,14,18,.8) 0%,rgba(11,14,18,.9) 100%)}}

@@ -1,0 +1,36 @@
+/* LA-500M2500M-50-S in-stock product page and entry points (added 2026-11-16). */
+.arm-product-hero .arm-product-grid p.pd-sub{font-family:var(--font-sans);font-size:17px;line-height:1.5;color:#d8dbe0;margin:0 0 26px;letter-spacing:.01em}
+.stock-status{display:flex;align-items:center;gap:0;margin:0;padding:18px 0;border-top:1px solid #554421;border-bottom:1px solid #554421}
+.arm-product-hero .arm-product-grid p.stock-price{font-family:var(--font-sans);font-size:28px;line-height:1.2;font-weight:500;color:#fff;margin:0;padding-right:28px}
+.arm-product-hero .arm-product-grid p.stock-avail{font-family:var(--font-sans);font-size:15px;line-height:1.4;font-weight:500;color:#ddb154;margin:0;padding-left:28px;border-left:1px solid #554421}
+.stock-avail span{display:block;font-size:11px;font-weight:400;letter-spacing:.14em;text-transform:uppercase;color:#9aa0a9;margin-bottom:3px}
+
+/* Product page body */
+.pd-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+.pd-key{width:100%;border-collapse:collapse;font-family:var(--font-sans);font-size:15px;border-top:2px solid var(--gold)}
+.pd-key th,.pd-key td{padding:13px 4px;border-bottom:1px solid #e3e3de;text-align:left;vertical-align:top}
+.pd-key th{font-weight:400;color:var(--text-muted);width:46%}
+.pd-key td{color:var(--text-dark);font-weight:500}
+.arm-section p.pd-note{font-size:14px;line-height:1.6;color:var(--text-muted);margin-top:14px}
+.pd-note a{color:#865f16;text-decoration:underline;text-underline-offset:3px}
+.pd-list{list-style:none;margin-top:8px;border-top:1px solid var(--gold)}
+.pd-list li{padding:12px 0 12px 22px;border-bottom:1px solid #e3e3de;position:relative;font-size:16px;line-height:1.6}
+.pd-list li::before{content:"";position:absolute;left:2px;top:22px;width:8px;height:2px;background:var(--gold)}
+.pd-apps li strong{display:block;color:var(--text-dark);font-weight:600}
+.pd-apps li{font-size:15px}
+.arm-enquiry .trust-link{color:#865f16}
+
+/* Entry points on listing pages */
+.range-table .stock-note{margin-left:10px;font-family:var(--font-sans);font-size:12px;color:rgba(255,255,255,.6)}
+.stock-strip{border:1px solid #deded8;border-left:3px solid var(--gold);background:#fff;padding:18px 22px;margin:0 0 28px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 24px;font-size:15px;line-height:1.6;color:var(--text-body)}
+.stock-strip p{flex:1 1 520px;margin:0}
+.stock-strip strong{color:var(--text-dark)}
+.stock-strip a.btn{white-space:nowrap}
+.range-section .stock-strip{background:#13171e;border-color:rgba(201,149,42,.35);border-left-color:var(--gold);color:rgba(255,255,255,.85)}
+.range-section .stock-strip strong{color:#fff}
+
+@media(max-width:900px){.pd-grid{grid-template-columns:1fr;gap:36px}}
+@media(max-width:560px){.arm-product-hero .arm-product-grid p.stock-price{font-size:24px;padding-right:20px}.arm-product-hero .arm-product-grid p.stock-avail{padding-left:20px}}
+.pd-grid p:not(.label)+p{margin-top:14px}
+.arm-enquiry p+p{margin-top:12px}
+.range-section .tbl-note a{color:var(--gold);text-decoration:underline;text-underline-offset:3px}

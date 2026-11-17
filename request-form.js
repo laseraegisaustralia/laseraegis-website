@@ -23,11 +23,19 @@
   document.getElementById("requestTypeInput").value = requestType;
   document.getElementById("sourcePageInput").value = sourcePage;
   document.getElementById("productDisplay").textContent = selectedLabel;
-  document.getElementById("subjectInput").value = `${requestType === "datasheet" ? "Datasheet request" : "Website enquiry"} — ${selectedLabel}`;
+  document.getElementById("subjectInput").value = `${requestType === "datasheet" ? "Datasheet request" : requestType === "order" ? "Order request" : "Website enquiry"} — ${selectedLabel}`;
 
   if (requestType === "datasheet") {
     document.getElementById("requestHeading").textContent = "Request a Datasheet";
     document.getElementById("requestIntro").textContent = "Confirm your contact details and our team will send the requested product information as soon as possible.";
+  } else if (requestType === "order") {
+    document.getElementById("requestHeading").textContent = "Order Request";
+    document.getElementById("requestIntro").textContent = "Tell us the quantity and delivery address. We will confirm stock, freight and payment details by email before dispatch.";
+    document.querySelector('label[for="message"]').textContent = "Quantity, delivery address and any notes";
+    document.getElementById("message").placeholder = "For example: 1 unit, delivery to Brisbane QLD 4000. Add a purchase order number, heat sink or testing requirements if needed.";
+    document.getElementById("submitButton").textContent = "Send Order Request";
+    const back = document.getElementById("changeProductLink");
+    if (back && product === "LA-500M2500M-50-S") { back.textContent = "Back to product"; back.href = "la-500m2500m-50-s/"; }
   } else if (requestType === "quote") {
     document.getElementById("requestHeading").textContent = "Discuss Your Requirement";
     document.getElementById("requestIntro").textContent = "Tell us which product you are considering. Additional requirements are optional and our engineering team will follow up directly.";
