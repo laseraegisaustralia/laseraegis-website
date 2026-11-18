@@ -330,3 +330,7 @@ a.gallery-item:hover .gallery-label{text-decoration:underline}
 
 /* Keep short introductions from leaving isolated final words. */
 .page-hero p,.cap-lede,.trust-intro,.verification-heading p,.home-heading p,.about-lede,.article-deck,.hero-deck{ text-wrap:pretty; }
+/* Footer legal link (all pages) */
+.footer-copy .footer-legal{color:inherit;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.25)}
+.footer-copy .footer-legal:hover,.footer-copy .footer-legal:focus-visible{color:var(--gold);border-color:var(--gold)}
+.form-privacy a{color:inherit;text-decoration:underline;text-underline-offset:2px}

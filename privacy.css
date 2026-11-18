@@ -1,0 +1,14 @@
+/* Privacy policy page */
+.privacy-hero{background:#0b0e12;color:#dedfe2;padding:90px 48px 72px}
+.privacy-hero-wrap{max-width:1100px;margin:0 auto}
+.privacy-hero h1{font-family:'IBM Plex Serif',serif;font-size:clamp(36px,4.2vw,54px);line-height:1.12;color:#fff;margin:18px 0 22px}
+.privacy-lede{font-family:'IBM Plex Serif',serif;font-size:19px;line-height:1.75;max-width:760px;margin:0}
+.privacy-main{background:#fff;color:#2e3138;padding:72px 48px 96px}
+.privacy-wrap{max-width:1100px;margin:0 auto;font-family:'IBM Plex Sans',sans-serif}
+.privacy-wrap p{max-width:820px;font-size:15px;line-height:1.75;margin:0 0 14px}
+.privacy-wrap p strong{display:block;margin-top:30px;}
+.privacy-wrap p:first-child strong{margin-top:0}
+.privacy-wrap p strong{font-size:16px;font-weight:600;color:#111318}
+.privacy-wrap p strong.privacy-sub{margin-top:18px;font-size:15px}
+.privacy-wrap a{color:#a07820}
+@media(max-width:860px){.privacy-hero{padding:64px 24px 48px}.privacy-lede{font-size:17px}.privacy-main{padding:48px 24px 72px}}

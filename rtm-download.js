@@ -13,6 +13,7 @@ function build() {
  dialog = document.createElement('dialog');
  dialog.className = 'rtm-download-modal';
  dialog.setAttribute('aria-labelledby','rtmDownloadTitle');
+ const privacyHref = new URL('privacy/', document.querySelector('.nav-logo')?.href || (location.origin + '/')).href;
  dialog.innerHTML = `<button type="button" class="rtm-download-close" aria-label="Close download window">×</button>
  <p class="rtm-download-eyebrow">FREE ENGINEERING CASE</p><h2 id="rtmDownloadTitle">Less Chasing. Clearer Project Decisions.</h2>
  <p>See how RTM connects supplier replies, controlled changes and verification evidence, helping your team reduce cross-file checking and prepare for review. Includes a 10-page radar case study, a practical review checklist and Excel / CSV requirements references.</p>
@@ -20,7 +21,7 @@ function build() {
  <label class="rtm-download-consent"><input type="checkbox" name="rtm_follow_up_consent" value="yes"><span>Optional: send me occasional RTM updates and relevant engineering resources. I can unsubscribe at any time.</span></label>
  <input type="checkbox" name="botcheck" class="rtm-download-honey" tabindex="-1" aria-hidden="true">
  <p class="rtm-download-status" role="status" aria-live="polite"></p><button class="rtm-download-submit" type="submit">Get My Free Case Pack ↓</button>
- <p class="rtm-download-small">We use your email to process this resource request. No installation needed. Updates are optional. To withdraw your subscription, email <a href="mailto:xander@laseraegis.dev">xander@laseraegis.dev</a>.</p></form>
+ <p class="rtm-download-small">We use your email to process this resource request. No installation needed. Updates are optional. To withdraw your subscription, email <a href="mailto:xander@laseraegis.dev">xander@laseraegis.dev</a>. <a href="${privacyHref}">Privacy Policy</a>.</p></form>
  <div class="rtm-download-success" hidden><p>Your case pack is ready. Read the PDF, or download the complete pack with Excel and CSV references.</p><a class="rtm-download-submit rtm-download-pdf" href="${pdf}" target="_blank" rel="noopener">Read the Engineering Case (PDF) ↗</a><a class="rtm-download-demo" download href="${pack}">Download the Complete Pack (ZIP) ↓</a><p>Want to see the decision trail with your team?</p><a class="rtm-download-demo" data-product="RTM" data-request-type="demo" data-cta-id="download_success_demo" href="${new URL('request.html?product=RTM&request_type=demo&source_page=radar_download',base).href}">Book a Guided Demo ↗</a><p class="rtm-download-small">RTM updates are sent only if you opted in.</p></div>`;
  document.body.append(dialog);
  const close = () => dialog.close();
